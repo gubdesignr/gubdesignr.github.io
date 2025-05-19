@@ -12,7 +12,7 @@ client: Start Bootstrap
 category: Web Development
 description: A more advanced 2-input preamplifier featuring subwoofer control, built around EZ80 and 5670 valves for richer tone and added functionality.
 
-price: 249
+price: 550-800
 short-description: Clean, minimalist phono stage
 
 ---
