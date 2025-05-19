@@ -1006,6 +1006,7 @@ ul.social-buttons li a:active {
   position: absolute;
   top: 0;
   bottom: 0;
+  height: 60%;
   left: 50%;
   width: 1px;
   background-color: #ccc;
