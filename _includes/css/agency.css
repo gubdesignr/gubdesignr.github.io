@@ -960,7 +960,7 @@ ul.social-buttons li a:active {
   justify-content: center;  /* center entire row horizontally */
   align-items: center;      /* vertically align button content */
   gap: 7vw;                /* space between buy-options and divider */
-  margin-top: 20px;
+  margin-top: 25px;
   position: relative;
 }
 
