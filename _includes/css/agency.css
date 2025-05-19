@@ -953,6 +953,22 @@ ul.social-buttons li a:active {
     color: #1E2A38;  /* Change this to your preferred text color (e.g., dark grey or black) */
 }
 
+/* Navy button for BUY actions */
+.btn-buy {
+    background-color: #1E2A38; /* Site-muted navy */
+    border-color: #1E2A38;
+    color: #ffffff;
+}
+
+.btn-buy:hover,
+.btn-buy:focus,
+.btn-buy:active,
+.btn-buy.active {
+    background-color: #EADCC5; /* Cream hover */
+    border-color: #EADCC5;
+    color: #1E2A38; /* Navy text on cream */
+}
+
 ::-moz-selection {
     text-shadow: none;
     background: #{{ site.data.template.color.secondary }};
