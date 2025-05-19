@@ -958,6 +958,9 @@ ul.social-buttons li a:active {
     background-color: #1E2A38; /* Site-muted navy */
     border-color: #1E2A38;
     color: #ffffff;
+    padding: 8px 22px; /*for spacing refinement*/
+  font-weight: bold;
+  margin-top: 4px; /* reduce space from text above */
 }
 
 .btn-buy:hover,
@@ -967,6 +970,14 @@ ul.social-buttons li a:active {
     background-color: #EADCC5; /* Cream hover */
     border-color: #EADCC5;
     color: #1E2A38; /* Navy text on cream */
+}
+/*buy btn wrapper for spacing*/
+.buy-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px; /* tighten gap between price and button */
+  padding: 0 10px;
 }
 
 ::-moz-selection {
