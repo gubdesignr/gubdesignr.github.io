@@ -960,10 +960,8 @@ ul.social-buttons li a:active {
     color: #ffffff;  
     margin-top: 0;
   display: block;
-  min-width: 140px; /* Optional: set to match typical text width */
   text-align: center;
 }
-/*more alignement testing*/
 .buy-col {
   display: flex;
   flex-direction: column;
