@@ -973,11 +973,27 @@ ul.social-buttons li a:active {
 }
 /*buy btn wrapper for spacing*/
 .buy-option {
+   padding: 10px 30px; /* horizontal padding to keep space from divider */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px; /* tighten gap between price and button */
-  padding: 0 10px;
+  justify-content: flex-start;
+}
+
+/* extra styling for spacing*/
+.buy-option p {
+  margin: 0 0 6px 0; /* less space below price text */
+  font-size: 1.1em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.buy-option form {
+  margin-top: 4px; /* tighten space between price and button */
+}
+
+.btn-buy {
+  min-width: 120px;
 }
 
 ::-moz-selection {
