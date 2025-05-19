@@ -961,6 +961,8 @@ ul.social-buttons li a:active {
   align-items: center;      /* vertically align button content */
   gap: 20px;                /* space between buy-options and divider */
   margin-top: 20px;
+
+  position: relative;       /* for absolute children */
 }
 
 .buy-option {
@@ -997,9 +999,17 @@ ul.social-buttons li a:active {
 }
 
 .divider {
-  width: 0.8px;
-  height: 80px;          /* height of the line (adjust as needed) */
+  /* width: 1px;
+  height: 80px;          
+  background-color: #ccc; */
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
   background-color: #ccc;
+  transform: translateX(-50%);
 }
 
 
