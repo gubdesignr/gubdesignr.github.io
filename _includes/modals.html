@@ -40,26 +40,37 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Notify Me</button>
                         </form>-->
-<!--Buy buttons-->
-<div class="row text-center" style="margin-top: 20px;">
-  <div class="col-sm-6 buy-option" style="border-right: 1px solid #ccc;">
+<!-- Stripe Buy Buttons -->
+<div class="row text-center buy-row" style="margin-top: 20px;">
+
+  <div class="col-sm-6 buy-option">
     <p><strong>Without Build</strong><br>£XXX</p>
     <form action="https://buy.stripe.com/test_XXXXXXXXXX" method="POST">
       <button type="submit" class="btn btn-buy">Buy Now</button>
     </form>
   </div>
-  <div class="col-sm-6 buy-option">
+
+  <!-- Vertical Divider -->
+  <div class="divider-wrapper d-none d-sm-flex">
+    <div class="vertical-divider"></div>
+  </div>
+
+  <div class="col-sm-6 buy-option" style="padding-left: 30px;">
     <p><strong>With Build</strong><br>£XXX</p>
     <form action="https://buy.stripe.com/test_YYYYYYYYYY" method="POST">
       <button type="submit" class="btn btn-buy">Buy Now</button>
     </form>
   </div>
-</div>
 
                         <!-- Line break for spacing between buttons -->
                         <br><br>
 
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+   <!-- Close Button -->
+<div class="text-center" style="margin-top: 20px;">
+  <button type="button" class="btn btn-default" data-dismiss="modal">
+    <i class="fa fa-times"></i> Close
+  </button>
+</div>                        
                         </div>
                     </div>
                 </div>
