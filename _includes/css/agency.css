@@ -1004,13 +1004,13 @@ ul.social-buttons li a:active {
 
 .divider {
   position: absolute;
-  top: 50%; /*smaller line so now pos vertically half way down container*/
+  top: 0; /* when50% - smaller line so now pos vertically half way down container*/
   bottom: 0;
-  height: 90%;
+ /* height: 90%; if u wanna alter height*/
   left: 50%;
   width: 1px;
   background-color: #ccc;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%); /*when changing heights to align use translateY(-50%);*/
 }
 
 
