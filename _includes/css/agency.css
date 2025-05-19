@@ -953,37 +953,52 @@ ul.social-buttons li a:active {
     color: #1E2A38;  /* Change this to your preferred text color (e.g., dark grey or black) */
 }
 
-/* Navy button for BUY actions */
-.btn-buy {
-  background-color: #1E2A38; /* Site-muted navy */
-  border-color: #1E2A38;
-  color: #ffffff;
-  margin-top: 0;
-  width: 160px; /* Fixed width */
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  font-size: 16px;
-  cursor: pointer;
+
+/*BUTTON ALIGNMENTS*/
+.buy-row-wrapper {
+  display: flex;
+  justify-content: center;  /* center entire row horizontally */
+  align-items: center;      /* vertically align button content */
+  gap: 20px;                /* space between buy-options and divider */
+  margin-top: 20px;
 }
 
-.buy-col {
+.buy-option {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 160px; /* Fixed width same as button */
-  margin: 0 auto; /* Center column in parent */
+  width: max-content;
+  margin: 0 10px;           /* spacing around each button */
+}
+
+.btn-buy {
+  width: 150px;
+  background-color: #1E2A38;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 5px;
   text-align: center;
-  padding: 10px;
 }
 
-.buy-title, .buy-price {
-  margin-bottom: 4px;
+.title, .price {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 150px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
-.buy-price {
-  margin-bottom: 10px;
+.divider {
+  width: 1px;
+  height: 80px;          /* height of the line (adjust as needed) */
+  background-color: #ccc;
 }
+
 
 .btn-buy:hover,
 .btn-buy:focus,

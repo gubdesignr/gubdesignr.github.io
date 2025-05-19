@@ -40,41 +40,25 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Notify Me</button>
                         </form>-->
-<div class="buy-row-wrapper" style="position: relative; margin-top: 10px;">
-  <!-- Divider Line -->
-  <div style="
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 1px;
-    background-color: #ccc;
-    transform: translateX(-50%);
-  "></div>
 
-  <!-- Stripe Buy Buttons -->
-  <div class="row text-center">
+
     <!-- Without Build -->
-    <div class="col-sm-6">
-      <div class="buy-col">
-        <p class="buy-title"><strong>Without Build</strong></p>
-        <p class="buy-price">£XXX</p>
-        <form action="https://buy.stripe.com/test_XXXXXXXXXX" method="POST">
-          <button type="submit" class="btn btn-buy">Buy Now</button>
-        </form>
-      </div>
-    </div>
+    <div class="buy-row-wrapper">
+  <div class="buy-option">
+    <p class="title">Without Build</p>
+    <p class="price">£XXX</p>
+     <form action="https://buy.stripe.com/test_XXXXXXXXXX" method="POST">
+    <button class="btn-buy">Buy Now</button></form>
+  </div>
+
+<div class="divider"></div>
 
     <!-- With Build -->
-    <div class="col-sm-6">
-      <div class="buy-col">
-        <p class="buy-title"><strong>With Build</strong></p>
-        <p class="buy-price">£XXX</p>
-        <form action="https://buy.stripe.com/test_YYYYYYYYYY" method="POST">
-          <button type="submit" class="btn btn-buy">Buy Now</button>
-        </form>
-      </div>
-    </div>
+     <div class="buy-option">
+    <p class="title">With Build</p>
+    <p class="price">£XXX</p>
+    <form action="https://buy.stripe.com/test_YYYYYYYYYY" method="POST">
+    <button class="btn-buy">Buy Now</button></form>
   </div>
 </div>
 
@@ -82,11 +66,7 @@
 <br><br>
 
 <!-- Close button -->
-<div class="text-center" style="margin-top: 20px;">
-  <button type="button" class="btn btn-default" data-dismiss="modal">
-    <i class="fa fa-times"></i> Close
-  </button>
-</div>    
+<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button> 
                         </div>
                     </div>
                 </div>
