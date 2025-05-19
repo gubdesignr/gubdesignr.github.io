@@ -959,7 +959,7 @@ ul.social-buttons li a:active {
   display: flex;
   justify-content: center;  /* center entire row horizontally */
   align-items: center;      /* vertically align button content */
-  gap: 20px;                /* space between buy-options and divider */
+  gap: 2.8vw;                /* space between buy-options and divider */
   margin-top: 20px;
   position: relative;
 }
