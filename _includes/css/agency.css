@@ -972,10 +972,6 @@ ul.social-buttons li a:active {
   width: max-content;
   margin: 0 5vw;           /* spacing around each button */
 }
-.buy-option form { /*removes default spacing for form needed for btn stripe*/
-  margin: 0;
-  line-height: 1;
-}
 
 .btn-buy {
   width: 100px;
