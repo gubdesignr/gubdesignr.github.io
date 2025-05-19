@@ -955,25 +955,26 @@ ul.social-buttons li a:active {
 
 /* Navy button for BUY actions */
 .btn-buy {
-  background-color: #1E2A38;
+  background-color: #1E2A38; /* Site-muted navy */
   border-color: #1E2A38;
-  color: #ffffff;  
+  color: #ffffff;
   margin-top: 0;
-  width: 150px; /* fix width so text aligns */
+  width: 160px; /* Fixed width */
   display: block;
   text-align: center;
-  cursor: pointer;
   padding: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .buy-col {
   display: flex;
   flex-direction: column;
-  align-items: center; /* center horizontally */
-  padding: 10px;
+  align-items: center;
+  width: 160px; /* Fixed width same as button */
+  margin: 0 auto; /* Center column in parent */
   text-align: center;
-  width: 150px; /* match btn width */
-  margin: 0 auto; /* center in column */
+  padding: 10px;
 }
 
 .buy-title, .buy-price {
