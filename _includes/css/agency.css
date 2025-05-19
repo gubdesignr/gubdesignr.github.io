@@ -970,12 +970,16 @@ ul.social-buttons li a:active {
   text-align: center;
 }
 
-.buy-title, .buy-price {
-  margin-bottom: 4px;
-}
-
 .buy-price {
   margin-bottom: 10px;
+}
+
+.buy-title, .buy-price {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn-buy:hover,
