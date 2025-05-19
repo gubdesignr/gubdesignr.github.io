@@ -992,6 +992,9 @@ ul.social-buttons li a:active {
   font-weight: bold;
   font-size: 16px;
 }
+.price {
+  font-weight: normal;  /* overwrite*/
+}
 
 .divider {
   width: 1px;
