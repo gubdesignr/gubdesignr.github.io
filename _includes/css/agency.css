@@ -984,7 +984,7 @@ ul.social-buttons li a:active {
   font-size: 16px;
   font-weight: bold;
   border-radius: 4px;
-  margin-top: 0px;
+  margin-top: 0px; /*does nothing*/
   text-align: center;
 }
 
@@ -995,7 +995,7 @@ ul.social-buttons li a:active {
   width: 150px;
   font-weight: bold;
   font-size: 16px;
-  margin-bottom: 0px;
+  margin-bottom: 0px; /*does nothing*/
 }
 .price {
   font-weight: normal;  /* overwrite*/
