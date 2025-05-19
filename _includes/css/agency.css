@@ -970,7 +970,12 @@ ul.social-buttons li a:active {
   flex-direction: column;
   align-items: center;
   width: max-content;
-  margin: 0 7vw;           /* spacing around each button */
+  margin: 0 6vw;           /* spacing around each button */
+}
+.buy-option form { /*removes default spacing for form needed for btn stripe*/
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 .btn-buy {
@@ -986,6 +991,7 @@ ul.social-buttons li a:active {
   margin-top: 0px; /*does nothing*/
   text-align: center;
 }
+
 
 .title, .price {
   margin: 0;
