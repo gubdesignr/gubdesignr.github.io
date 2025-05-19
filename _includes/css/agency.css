@@ -981,6 +981,7 @@ ul.social-buttons li a:active {
   padding: 10px 0;
   cursor: pointer;
   font-size: 16px;
+  font-weight: bold;
   border-radius: 4px;
   margin-top: 5px;
   text-align: center;
@@ -996,6 +997,7 @@ ul.social-buttons li a:active {
 }
 .price {
   font-weight: normal;  /* overwrite*/
+  font-size: 14px;
 }
 
 .divider {
