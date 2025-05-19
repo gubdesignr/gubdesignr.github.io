@@ -40,34 +40,48 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Notify Me</button>
                         </form>-->
-<!-- Stripe Buy Buttons -->
-<div class="row text-center" style="margin-top: 10px;">
-  <!-- Without Build -->
-  <div class="col-sm-6" style="border-right: 1px solid #ccc;">
-    <div>
-      <p style="margin-bottom: 4px;"><strong>Without Build</strong></p>
-      <p style="margin-bottom: 10px;">£XXX</p>
-    </div>
-    <div style="display: flex; justify-content: center;">
-      <form action="https://buy.stripe.com/test_XXXXXXXXXX" method="POST">
-        <button type="submit" class="btn btn-buy">Buy Now</button>
-      </form>
-    </div>
-  </div>
+<div class="buy-row-wrapper" style="position: relative; margin-top: 10px;">
+  <!-- Divider Line -->
+  <div style="
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background-color: #ccc;
+    transform: translateX(-50%);
+  "></div>
 
-  <!-- With Build -->
-  <div class="col-sm-6">
-    <div>
-      <p style="margin-bottom: 4px;"><strong>With Build</strong></p>
-      <p style="margin-bottom: 10px;">£XXX</p>
+  <!-- Stripe Buy Buttons -->
+  <div class="row text-center">
+    <!-- Without Build -->
+    <div class="col-sm-6">
+      <div>
+        <p style="margin-bottom: 4px;"><strong>Without Build</strong></p>
+        <p style="margin-bottom: 10px;">£XXX</p>
+      </div>
+      <div style="display: flex; justify-content: center;">
+        <form action="https://buy.stripe.com/test_XXXXXXXXXX" method="POST">
+          <button type="submit" class="btn btn-buy">Buy Now</button>
+        </form>
+      </div>
     </div>
-    <div style="display: flex; justify-content: center;">
-      <form action="https://buy.stripe.com/test_YYYYYYYYYY" method="POST">
-        <button type="submit" class="btn btn-buy">Buy Now</button>
-      </form>
+
+    <!-- With Build -->
+    <div class="col-sm-6">
+      <div>
+        <p style="margin-bottom: 4px;"><strong>With Build</strong></p>
+        <p style="margin-bottom: 10px;">£XXX</p>
+      </div>
+      <div style="display: flex; justify-content: center;">
+        <form action="https://buy.stripe.com/test_YYYYYYYYYY" method="POST">
+          <button type="submit" class="btn btn-buy">Buy Now</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
+
 
                         <!-- Line break for spacing between buttons -->
                         <br><br>
@@ -77,7 +91,7 @@
   <button type="button" class="btn btn-default" data-dismiss="modal">
     <i class="fa fa-times"></i> Close
   </button>
-</div>             
+</div>   
                         </div>
                     </div>
                 </div>
