@@ -957,10 +957,27 @@ ul.social-buttons li a:active {
 .btn-buy {
     background-color: #1E2A38; /* Site-muted navy */
     border-color: #1E2A38;
-    color: #ffffff;
-    padding: 8px 22px; /*for spacing refinement*/
-  font-weight: bold;
-  margin-top: 4px; /* reduce space from text above */
+    color: #ffffff;  
+    margin-top: 0;
+  display: block;
+  min-width: 140px; /* Optional: set to match typical text width */
+  text-align: center;
+}
+/*more alignement testing*/
+.buy-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.buy-title, .buy-price {
+  margin-bottom: 4px;
+}
+
+.buy-price {
+  margin-bottom: 10px;
 }
 
 .btn-buy:hover,
