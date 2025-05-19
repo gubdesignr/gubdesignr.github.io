@@ -954,15 +954,13 @@ ul.social-buttons li a:active {
 }
 
 
-/*BUTTON ALIGNMENTS*/
+/*modal buy now alignments*/
 .buy-row-wrapper {
   display: flex;
   justify-content: center;  /* center entire row horizontally */
   align-items: center;      /* vertically align button content */
-  gap: 7vw;                /* space between buy-options and divider */
+  gap: 20px;                /* space between buy-options and divider */
   margin-top: 20px;
-
-  position: relative;       /* for absolute children */
 }
 
 .buy-option {
@@ -970,22 +968,21 @@ ul.social-buttons li a:active {
   flex-direction: column;
   align-items: center;
   width: max-content;
-  margin: 0 5vw;           /* spacing around each button */
+  margin: 0 10px;           /* spacing around each button */
 }
 
 .btn-buy {
-  width: 100px;
+  width: 150px;
   background-color: #1E2A38;
   color: white;
   border: none;
   padding: 10px 0;
   cursor: pointer;
   font-size: 16px;
-  font-weight: bold;
   border-radius: 4px;
+  margin-top: 5px;
   text-align: center;
 }
-
 
 .title, .price {
   margin: 0;
@@ -995,16 +992,13 @@ ul.social-buttons li a:active {
   font-weight: bold;
   font-size: 16px;
 }
+
 .price {
   font-weight: normal;  /* overwrite*/
   font-size: 15px;
 }
 
 .divider {
-  /* width: 1px;
-  height: 80px;          
-  background-color: #ccc; */
-
   position: absolute;
   top: 0;
   bottom: 0;
