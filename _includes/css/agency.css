@@ -958,24 +958,20 @@ ul.social-buttons li a:active {
     background-color: #1E2A38; /* Site-muted navy */
     border-color: #1E2A38;
     color: #ffffff;  
-    margin-top: 0;
   display: block;
   text-align: center;
+  
+  padding: 10px 20px;
+  margin-top: 5px; /* Adjusted to keep the button visually close to the price */
 }
+/* Wrapper to center-align the text+button unit */
 .buy-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
   text-align: center;
 }
 
-.buy-title, .buy-price {
-  margin-bottom: 4px;
-}
-
-.buy-price {
-  margin-bottom: 10px;
+.title-price {
+  display: inline-block;
+  text-align: left;
 }
 
 .btn-buy:hover,
