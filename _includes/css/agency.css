@@ -959,7 +959,7 @@ ul.social-buttons li a:active {
   display: flex;
   justify-content: center;  /* center entire row horizontally */
   align-items: center;      /* vertically align button content */
-  gap: 20px;                /* space between buy-options and divider */
+  gap: 10vw;                /* space between buy-options and divider */
   margin-top: 20px;
 
   position: relative;       /* for absolute children */
@@ -970,7 +970,7 @@ ul.social-buttons li a:active {
   flex-direction: column;
   align-items: center;
   width: max-content;
-  margin: 0 6vw;           /* spacing around each button */
+  margin: 0 7vw;           /* spacing around each button */
 }
 .buy-option form { /*removes default spacing for form needed for btn stripe*/
   margin: 0;
