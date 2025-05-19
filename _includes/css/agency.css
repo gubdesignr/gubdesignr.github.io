@@ -994,7 +994,7 @@ ul.social-buttons li a:active {
   font-weight: bold;
   font-size: 16px;
 
-  line-height: 0.5;
+  line-height: 0;
 }
 
 .price {
