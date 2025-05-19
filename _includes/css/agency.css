@@ -971,7 +971,6 @@ ul.social-buttons li a:active {
   align-items: center;
   width: max-content;
   margin: 0 7vw;           /* spacing around each button */
-  gap: 0px;
 }
 
 .btn-buy {
