@@ -468,7 +468,7 @@ Products overall description styling*/
     text-align: center;
     font-size: 17px;
     color: #fff;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.55); /* subtle contrast boost */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* subtle contrast boost */
     opacity: 1;
 }
 
