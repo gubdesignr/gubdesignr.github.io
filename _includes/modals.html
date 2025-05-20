@@ -44,62 +44,66 @@
                         </form>-->
 
 
-   <div class="buy-option">
-  <p class="title">Without Build</p>
-  <p class="price">{{ product.price_diy }}</p>
+   <div class="buy-row-wrapper">
 
-  <!-- Region dropdown -->
-  <select id="diy-select-{{ product.modal-id }}" class="region-select">
-    <option value="">Select your region 📍</option>
-    <optgroup label="🇬🇧 UK – £20">
-      <option value="{{ product.link_diy_uk }}">🇬🇧 United Kingdom</option>
-    </optgroup>
-    <optgroup label="🌏 Asia-Pacific – £65">
-      <option value="{{ product.link_diy_apac }}">🇸🇬 Singapore</option>
-      <option value="{{ product.link_diy_apac }}">🇭🇰 Hong Kong</option>
-      <option value="{{ product.link_diy_apac }}">🇹🇭 Thailand</option>
-      <option value="{{ product.link_diy_apac }}">🇦🇺 Australia</option>
-      <option value="{{ product.link_diy_apac }}">🇳🇿 New Zealand</option>
-    </optgroup>
-    <optgroup label="🇪🇺 Europe – £52.10">
-      <option value="{{ product.link_diy_europe }}">🇩🇪 Germany</option>
-      <option value="{{ product.link_diy_europe }}">🇫🇷 France</option>
-      <option value="{{ product.link_diy_europe }}">🇪🇸 Spain</option>
-      <option value="{{ product.link_diy_europe }}">🇮🇹 Italy</option>
-    </optgroup>
-    <optgroup label="🇪🇺 Scandinavia – £62">
-      <option value="{{ product.link_diy_scandinavia }}">🇩🇰 Denmark</option>
-      <option value="{{ product.link_diy_scandinavia }}">🇳🇴 Norway</option>
-      <option value="{{ product.link_diy_scandinavia }}">🇸🇪 Sweden</option>
-      <option value="{{ product.link_diy_scandinavia }}">🇫🇮 Finland</option>
-    </optgroup>
-    <optgroup label="🌎 North America – £80">
-      <option value="{{ product.link_diy_na }}">🇨🇦 Canada</option>
-      <option value="{{ product.link_diy_na }}">🇺🇸 USA</option>
-    </optgroup>
-  </select>
+  <!-- DIY Option -->
+  <div class="buy-option">
+    <p class="title">Without Build</p>
+    <p class="price">£550</p>
 
-  <!-- Buy button -->
-  <button class="btn-buy" onclick="
-    const sel = document.getElementById('diy-select-{{ product.modal-id }}');
-    if (sel.value) {
-      window.open(sel.value, '_blank');
-    } else {
-      alert('Please select your region first.');
-    }
-  ">
-    Buy Now
-  </button>
-</div>
+    <form id="form-diy" method="GET" target="_blank">
+      <label for="region-diy">📍 Select your region</label>
+      <select id="region-diy" onchange="updateFormLink(this, 'diy')" required>
+        <option value="">Choose your shipping region</option>
+        
+        <option value="uk" data-link="https://buy.stripe.com/test_diy_uk">🇬🇧 United Kingdom – £20</option>
 
+        <option value="eu" data-link="https://buy.stripe.com/test_diy_eu">🇪🇺 Europe – £52.10</option>
+        <option disabled> 🇩🇪 Germany 🇫🇷 France 🇪🇸 Spain 🇮🇹 Italy</option>
 
-<div class="divider"></div>
+        <option value="scandi" data-link="https://buy.stripe.com/test_diy_scandi">🇩🇰 Scandinavia – £62</option>
+        <option disabled> 🇳🇴 Norway 🇸🇪 Sweden 🇫🇮 Finland</option>
 
-     <!-- Built Option -->
+        <option value="apac" data-link="https://buy.stripe.com/test_diy_apac">🌏 Asia-Pacific – £65</option>
+        <option disabled> 🇸🇬 Singapore 🇭🇰 Hong Kong 🇹🇭 Thailand 🇦🇺 Australia 🇳🇿 New Zealand</option>
+
+        <option value="na" data-link="https://buy.stripe.com/test_diy_na">🌎 North America – £80</option>
+        <option disabled> 🇺🇸 USA 🇨🇦 Canada</option>
+      </select>
+
+      <br>
+      <button class="btn-buy">Buy Now</button>
+    </form>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Built Option -->
   <div class="buy-option">
     <p class="title">With Build</p>
-    <p class="price">{{ product.price_built }}</p>
-    <form action="{{ product.link_built }}" method="POST" target="_blank">
+    <p class="price">£800</p>
+
+    <form id="form-built" method="GET" target="_blank">
+      <label for="region-built">📍 Select your region</label>
+      <select id="region-built" onchange="updateFormLink(this, 'built')" required>
+        <option value="">Choose your shipping region</option>
+
+        <option value="uk" data-link="https://buy.stripe.com/test_built_uk">🇬🇧 United Kingdom – £20</option>
+
+        <option value="eu" data-link="https://buy.stripe.com/test_built_eu">🇪🇺 Europe – £52.10</option>
+        <option disabled> 🇩🇪 Germany 🇫🇷 France 🇪🇸 Spain 🇮🇹 Italy</option>
+
+        <option value="scandi" data-link="https://buy.stripe.com/test_built_scandi">🇩🇰 Scandinavia – £62</option>
+        <option disabled> 🇳🇴 Norway 🇸🇪 Sweden 🇫🇮 Finland</option>
+
+        <option value="apac" data-link="https://buy.stripe.com/test_built_apac">🌏 Asia-Pacific – £65</option>
+        <option disabled> 🇸🇬 Singapore 🇭🇰 Hong Kong 🇹🇭 Thailand 🇦🇺 Australia 🇳🇿 New Zealand</option>
+
+        <option value="na" data-link="https://buy.stripe.com/test_built_na">🌎 North America – £80</option>
+        <option disabled> 🇺🇸 USA 🇨🇦 Canada</option>
+      </select>
+
+      <br>
       <button class="btn-buy">Buy Now</button>
     </form>
   </div>
