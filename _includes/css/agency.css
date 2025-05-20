@@ -451,12 +451,14 @@ Products overall description styling*/
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
-    background: #EADCC5; /* Fallback when no plugin support */
-    background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .9);
+    /*background: #EADCC5; /* Fallback when no plugin support /
+    background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .9);*/
+    background: rgba(234, 220, 197, 0.85);
 }
 
 #products .product-item .product-link .product-hover:hover {
-    opacity: 0.85;
+    /*opacity: 0.85;*/
+    background: rgba(234, 220, 197, 0.85);
 }
 
 #products .product-item .product-link .product-hover .product-hover-content {
@@ -466,7 +468,7 @@ Products overall description styling*/
     height: 20px;
     margin-top: -12px;
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     color: #fff;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.4); /* subtle contrast boost */
     opacity: 1;

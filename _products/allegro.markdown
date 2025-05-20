@@ -11,6 +11,6 @@ client: Start Bootstrap
 category: Web Development
 description: A more advanced 2-input preamplifier featuring subwoofer control, built around EZ80 and 5670 valves for richer tone and added functionality.
 
-price: "DIY: £550 L Built: £800"
+price: "DIY: £550 / Built: £800"
 
 ---
