@@ -44,7 +44,7 @@
                         </form>-->
 
 
-  <div class="buy-row-wrapper">
+ <div class="buy-row-wrapper">
   <!-- DIY Option -->
   <div class="buy-option">
     <p class="title">Without Build</p>
@@ -52,6 +52,37 @@
     <form action="{{ product.link_diy }}" method="POST" target="_blank">
       <button class="btn-buy">Buy Now</button>
     </form>
+    <!-- Dropdown below DIY button -->
+    <select class="shipping-select">
+      <option>🇬🇧 United Kingdom & Northern Ireland – £20</option>
+
+      <optgroup label="🌏 Asia-Pacific - £65">
+        <option>🇸🇬 Singapore</option>
+        <option>🇭🇰 Hong Kong</option>
+        <option>🇹🇭 Thailand</option>
+        <option>🇦🇺 Australia</option>
+        <option>🇳🇿 New Zealand</option>
+      </optgroup>
+
+      <optgroup label="🇪🇺 Europe - £52.10">
+        <option>🇩🇪 Germany</option>
+        <option>🇫🇷 France</option>
+        <option>🇪🇸 Spain (Mainland Only)</option>
+        <option>🇮🇹 Italy</option>
+      </optgroup>
+
+      <optgroup label="🇪🇺 Scandinavia - £62">
+        <option>🇩🇰 Norway</option>
+        <option>🇳🇴 Denmark</option>
+        <option>🇸🇪 Sweden</option>
+        <option>🇫🇮 Finland</option>
+      </optgroup>
+
+      <optgroup label="🌎 North America - £80">
+        <option>🇨🇦 Canada</option>
+        <option>🇺🇸 USA</option>
+      </optgroup>
+    </select>
   </div>
 
   <div class="divider"></div>
@@ -63,6 +94,37 @@
     <form action="{{ product.link_built }}" method="POST" target="_blank">
       <button class="btn-buy">Buy Now</button>
     </form>
+    <!-- Dropdown below Built button -->
+    <select class="shipping-select">
+      <option>🇬🇧 United Kingdom & Northern Ireland – £20</option>
+
+      <optgroup label="🌏 Asia-Pacific - £65">
+        <option>🇸🇬 Singapore</option>
+        <option>🇭🇰 Hong Kong</option>
+        <option>🇹🇭 Thailand</option>
+        <option>🇦🇺 Australia</option>
+        <option>🇳🇿 New Zealand</option>
+      </optgroup>
+
+      <optgroup label="🇪🇺 Europe - £52.10">
+        <option>🇩🇪 Germany</option>
+        <option>🇫🇷 France</option>
+        <option>🇪🇸 Spain (Mainland Only)</option>
+        <option>🇮🇹 Italy</option>
+      </optgroup>
+
+      <optgroup label="🇪🇺 Scandinavia - £62">
+        <option>🇩🇰 Norway</option>
+        <option>🇳🇴 Denmark</option>
+        <option>🇸🇪 Sweden</option>
+        <option>🇫🇮 Finland</option>
+      </optgroup>
+
+      <optgroup label="🌎 North America - £80">
+        <option>🇨🇦 Canada</option>
+        <option>🇺🇸 USA</option>
+      </optgroup>
+    </select>
   </div>
 </div>
 
