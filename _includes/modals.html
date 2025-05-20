@@ -44,15 +44,53 @@
                         </form>-->
 
 
-    <!-- Without Build -->
-    <div class="buy-row-wrapper">
-  <div class="buy-option">
-    <p class="title">Without Build</p>
-    <p class="price">{{ product.price_diy }}</p>
-    <form action="{{ product.link_diy }}" method="POST" target="_blank">
-      <button class="btn-buy">Buy Now</button>
-    </form>
-  </div>
+   <div class="buy-option">
+  <p class="title">Without Build</p>
+  <p class="price">{{ product.price_diy }}</p>
+
+  <!-- Region dropdown -->
+  <select id="diy-select-{{ product.modal-id }}" class="region-select">
+    <option value="">Select your region 📍</option>
+    <optgroup label="🇬🇧 UK – £20">
+      <option value="{{ product.link_diy_uk }}">🇬🇧 United Kingdom</option>
+    </optgroup>
+    <optgroup label="🌏 Asia-Pacific – £65">
+      <option value="{{ product.link_diy_apac }}">🇸🇬 Singapore</option>
+      <option value="{{ product.link_diy_apac }}">🇭🇰 Hong Kong</option>
+      <option value="{{ product.link_diy_apac }}">🇹🇭 Thailand</option>
+      <option value="{{ product.link_diy_apac }}">🇦🇺 Australia</option>
+      <option value="{{ product.link_diy_apac }}">🇳🇿 New Zealand</option>
+    </optgroup>
+    <optgroup label="🇪🇺 Europe – £52.10">
+      <option value="{{ product.link_diy_europe }}">🇩🇪 Germany</option>
+      <option value="{{ product.link_diy_europe }}">🇫🇷 France</option>
+      <option value="{{ product.link_diy_europe }}">🇪🇸 Spain</option>
+      <option value="{{ product.link_diy_europe }}">🇮🇹 Italy</option>
+    </optgroup>
+    <optgroup label="🇪🇺 Scandinavia – £62">
+      <option value="{{ product.link_diy_scandinavia }}">🇩🇰 Denmark</option>
+      <option value="{{ product.link_diy_scandinavia }}">🇳🇴 Norway</option>
+      <option value="{{ product.link_diy_scandinavia }}">🇸🇪 Sweden</option>
+      <option value="{{ product.link_diy_scandinavia }}">🇫🇮 Finland</option>
+    </optgroup>
+    <optgroup label="🌎 North America – £80">
+      <option value="{{ product.link_diy_na }}">🇨🇦 Canada</option>
+      <option value="{{ product.link_diy_na }}">🇺🇸 USA</option>
+    </optgroup>
+  </select>
+
+  <!-- Buy button -->
+  <button class="btn-buy" onclick="
+    const sel = document.getElementById('diy-select-{{ product.modal-id }}');
+    if (sel.value) {
+      window.open(sel.value, '_blank');
+    } else {
+      alert('Please select your region first.');
+    }
+  ">
+    Buy Now
+  </button>
+</div>
 
 
 <div class="divider"></div>
