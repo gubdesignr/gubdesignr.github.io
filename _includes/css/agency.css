@@ -469,6 +469,7 @@ Products overall description styling*/
     font-size: 20px;
     color: #fff;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.4); /* subtle contrast boost */
+    font-weight: 600;
 }
 
 #products .product-item .product-link .product-hover .product-hover-content i {
