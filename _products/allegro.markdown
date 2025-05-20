@@ -13,4 +13,10 @@ description: A more advanced 2-input preamplifier featuring subwoofer control, b
 
 price: "DIY: £550 / Built: £800"
 
+price_diy: £550
+link_diy: https://buy.stripe.com/test_XXXXDIY
+
+price_built: £800
+link_built: https://buy.stripe.com/test_XXXXBUILT
+
 ---

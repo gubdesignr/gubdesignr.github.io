@@ -48,21 +48,25 @@
     <div class="buy-row-wrapper">
   <div class="buy-option">
     <p class="title">Without Build</p>
-    <p class="price">£XXX</p>
-     <form action="https://buy.stripe.com/test_XXXXXXXXXX" method="POST">
-    <button class="btn-buy">Buy Now</button></form>
+    <p class="price">{{ product.price_diy }}</p>
+    <form action="{{ product.link_diy }}" method="POST" target="_blank">
+      <button class="btn-buy">Buy Now</button>
+    </form>
   </div>
+
 
 <div class="divider"></div>
 
-    <!-- With Build -->
-     <div class="buy-option">
+     <!-- Built Option -->
+  <div class="buy-option">
     <p class="title">With Build</p>
-    <p class="price">£XXX</p>
-    <form action="https://buy.stripe.com/test_YYYYYYYYYY" method="POST">
-    <button class="btn-buy">Buy Now</button></form>
+    <p class="price">{{ product.price_built }}</p>
+    <form action="{{ product.link_built }}" method="POST" target="_blank">
+      <button class="btn-buy">Buy Now</button>
+    </form>
   </div>
 </div>
+
 
 <!-- Line break for spacing between buttons -->
 <br><br>
