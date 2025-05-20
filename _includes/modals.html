@@ -44,15 +44,65 @@
                         </form>-->
 
 
-  <div class="buy-row-wrapper">
   <!-- DIY Option -->
-  <div class="buy-option">
-    <p class="title">Without Build</p>
-    <p class="price">{{ product.price_diy }}</p>
-    <form action="{{ product.link_diy }}" method="POST" target="_blank">
-      <button class="btn-buy">Buy Now</button>
-    </form>
-  </div>
+<div class="buy-option">
+  <p class="title">Without Build</p>
+  <p class="price">{{ product.price_diy }}</p>
+
+  <form method="POST" target="_blank" onsubmit="return false;">
+    <button class="btn-buy" onclick="toggleDropdown('diy')">Buy Now</button>
+
+    <div class="region-dropdown" id="dropdown-diy">
+      <div class="region">
+        🌍 Europe
+        <div class="country" onclick="submitStripe('{{ product.link_diy_eu }}')">🇫🇷 France — £550</div>
+        <div class="country" onclick="submitStripe('{{ product.link_diy_eu }}')">🇩🇪 Germany — £550</div>
+        <div class="country" onclick="submitStripe('{{ product.link_diy_scandi }}')">🇩🇰 Denmark — £550</div>
+      </div>
+      <div class="region">
+        🇬🇧 UK
+        <div class="country" onclick="submitStripe('{{ product.link_diy_uk }}')">🇬🇧 United Kingdom — £550</div>
+      </div>
+      <div class="region">
+        🌏 APAC
+        <div class="country" onclick="submitStripe('{{ product.link_diy_apac }}')">🇦🇺 Australia — £550</div>
+        <div class="country" onclick="submitStripe('{{ product.link_diy_apac }}')">🇸🇬 Singapore — £550</div>
+      </div>
+      <div class="region">
+        🌎 North America
+        <div class="country" onclick="submitStripe('{{ product.link_diy_na }}')">🇺🇸 USA — £550</div>
+        <div class="country" onclick="submitStripe('{{ product.link_diy_na }}')">🇨🇦 Canada — £550</div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+  function toggleDropdown(type) {
+    // Close all dropdowns first
+    document.querySelectorAll('.region-dropdown').forEach(el => el.style.display = 'none');
+
+    const dropdown = document.getElementById(`dropdown-${type}`);
+    dropdown.style.display = 'block';
+  }
+
+  function submitStripe(link) {
+    const form = document.createElement('form');
+    form.action = link;
+    form.method = 'POST';
+    form.target = '_blank';
+    document.body.appendChild(form);
+    form.submit();
+    document.body.removeChild(form);
+  }
+
+  // Close dropdown when clicking elsewhere
+  window.addEventListener('click', function(e) {
+    if (!e.target.classList.contains('btn-buy')) {
+      document.querySelectorAll('.region-dropdown').forEach(el => el.style.display = 'none');
+    }
+  });
+</script>
 
   <div class="divider"></div>
 
