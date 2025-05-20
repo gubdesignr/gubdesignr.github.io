@@ -17,9 +17,7 @@
                 </div>
             </div>
             <div class="row">
-            <!--{% comment %}
-{% for post in site.posts %}
-{% endcomment %} liquid comment-->
+            
             {% assign sorted_products = site.products | sort: "order" %}
 {% for product in sorted_products %}
                 <div class="col-md-4 col-sm-6 product-item">
