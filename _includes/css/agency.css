@@ -451,15 +451,12 @@ Products overall description styling*/
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
-    /*background: #EADCC5; /* Fallback when no plugin support /
-    background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .9);*/
-     background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, 0); /* transparent initially */
+    background: #EADCC5; /* Fallback when no plugin support */
+    background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .9);
 }
 
-#products .product-item .product-link:hover .product-hover:hover {
-    /*opacity: 0.85;*/
-    opacity: 1; /* fade in container */
-    background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, 0.85); /* translucent cream */
+#products .product-item .product-link .product-hover:hover {
+    opacity: 0.85;
 }
 
 #products .product-item .product-link .product-hover .product-hover-content {
