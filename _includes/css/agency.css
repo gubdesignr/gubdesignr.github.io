@@ -456,8 +456,7 @@ Products overall description styling*/
 }
 
 #products .product-item .product-link .product-hover:hover {
-    /*opacity: 0.85;*/
-    background-color: rgba(234, 220, 197, 0.85); /* cream with 85% opacity */
+    opacity: 0.85;
 }
 
 #products .product-item .product-link .product-hover .product-hover-content {
