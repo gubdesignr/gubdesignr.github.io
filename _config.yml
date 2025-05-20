@@ -6,6 +6,11 @@ title: PhonoVox
 email: phonovoxgroup@gmail.com
 description: "Engineering Amplifiers for Home, Stage, and Studio."
 
+#activate products
+collections:
+  products:
+    output: true 
+
 
 # Team names, titles and social links
 # people:
