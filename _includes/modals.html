@@ -44,37 +44,75 @@
                         </form>-->
 
 
-   <div class="buy-row-wrapper">
+  <div class="buy-row-wrapper">
 
-  <!-- DIY Option -->
+  <!-- Without Build -->
   <div class="buy-option">
     <p class="title">Without Build</p>
-    <p class="price">£550</p>
-
-    <form id="form-diy" method="GET" target="_blank">
-      <label for="region-diy">📍 Select your region</label>
-      <select id="region-diy" onchange="updateFormLink(this, 'diy')" required>
-        <option value="">Choose your shipping region</option>
-        
-        <option value="uk" data-link="https://buy.stripe.com/test_diy_uk">🇬🇧 United Kingdom – £20</option>
-
-        <option value="eu" data-link="https://buy.stripe.com/test_diy_eu">🇪🇺 Europe – £52.10</option>
-        <option disabled> 🇩🇪 Germany 🇫🇷 France 🇪🇸 Spain 🇮🇹 Italy</option>
-
-        <option value="scandi" data-link="https://buy.stripe.com/test_diy_scandi">🇩🇰 Scandinavia – £62</option>
-        <option disabled> 🇳🇴 Norway 🇸🇪 Sweden 🇫🇮 Finland</option>
-
-        <option value="apac" data-link="https://buy.stripe.com/test_diy_apac">🌏 Asia-Pacific – £65</option>
-        <option disabled> 🇸🇬 Singapore 🇭🇰 Hong Kong 🇹🇭 Thailand 🇦🇺 Australia 🇳🇿 New Zealand</option>
-
-        <option value="na" data-link="https://buy.stripe.com/test_diy_na">🌎 North America – £80</option>
-        <option disabled> 🇺🇸 USA 🇨🇦 Canada</option>
-      </select>
-
-      <br>
-      <button class="btn-buy">Buy Now</button>
-    </form>
+    <p class="price">{{ product.price_diy }}</p>
+    <button class="btn-buy" onclick="toggleDropdown('diy')">Buy Now</button>
+    <div class="region-dropdown" id="dropdown-diy">
+      <div class="region">
+        <h4>🇬🇧 UK & NI – £20</h4>
+        <div class="country-list">
+          <button onclick="location.href='{{ product.link_diy_uk }}'">🇬🇧 United Kingdom</button>
+        </div>
+      </div>
+      <div class="region">
+        <h4>🌏 Asia-Pacific – £65</h4>
+        <div class="country-list">
+          <button onclick="location.href='{{ product.link_diy_apac }}'">🇸🇬 Singapore</button>
+          <button onclick="location.href='{{ product.link_diy_apac }}'">🇭🇰 Hong Kong</button>
+          <button onclick="location.href='{{ product.link_diy_apac }}'">🇹🇭 Thailand</button>
+          <button onclick="location.href='{{ product.link_diy_apac }}'">🇦🇺 Australia</button>
+          <button onclick="location.href='{{ product.link_diy_apac }}'">🇳🇿 New Zealand</button>
+        </div>
+      </div>
+      <div class="region">
+        <h4>🇪 Europe – £52.10</h4>
+        <div class="country-list">
+          <button onclick="location.href='{{ product.link_diy_eu }}'">🇩🇪 Germany</button>
+          <button onclick="location.href='{{ product.link_diy_eu }}'">🇫🇷 France</button>
+          <button onclick="location.href='{{ product.link_diy_eu }}'">🇪🇸 Spain</button>
+          <button onclick="location.href='{{ product.link_diy_eu }}'">🇮🇹 Italy</button>
+        </div>
+      </div>
+      <div class="region">
+        <h4>🇸 Scandinavia – £62</h4>
+        <div class="country-list">
+          <button onclick="location.href='{{ product.link_diy_scandi }}'">🇰🇳 Norway</button>
+          <button onclick="location.href='{{ product.link_diy_scandi }}'">🇩🇰 Denmark</button>
+          <button onclick="location.href='{{ product.link_diy_scandi }}'">🇸🇪 Sweden</button>
+          <button onclick="location.href='{{ product.link_diy_scandi }}'">🇫🇮 Finland</button>
+        </div>
+      </div>
+      <div class="region">
+        <h4>🌎 North America – £80</h4>
+        <div class="country-list">
+          <button onclick="location.href='{{ product.link_diy_na }}'">🇨🇦 Canada</button>
+          <button onclick="location.href='{{ product.link_diy_na }}'">🇺🇸 USA</button>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <script>
+  function toggleDropdown(type) {
+    document.querySelectorAll('.region-dropdown').forEach(drop => {
+      if (drop.id === 'dropdown-' + type) {
+        drop.style.display = drop.style.display === 'block' ? 'none' : 'block';
+      } else {
+        drop.style.display = 'none';
+      }
+    });
+  }
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.buy-option')) {
+      document.querySelectorAll('.region-dropdown').forEach(drop => drop.style.display = 'none');
+    }
+  });
+</script>
 
   <div class="divider"></div>
 
