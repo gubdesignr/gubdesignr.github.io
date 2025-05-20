@@ -456,7 +456,7 @@ Products overall description styling*/
      background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, 0); /* transparent initially */
 }
 
-#products .product-item .product-link .product-hover:hover {
+#products .product-item .product-link:hover .product-hover:hover {
     /*opacity: 0.85;*/
     opacity: 1; /* fade in container */
     background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, 0.85); /* translucent cream */
