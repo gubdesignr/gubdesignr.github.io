@@ -970,7 +970,7 @@ ul.social-buttons li a:active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 265px; /*error message content pushing max-content so test with 250px*/
+  width: 250px; /*error message content pushing max-content so test with 250px*/
   margin: 0 10px;           /* spacing around each button */
 }
 
