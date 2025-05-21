@@ -88,7 +88,7 @@
 
      <!-- Inline error message for shipping -->
       <div class="error-wrapper">
-  <p class="shipping-error" style="color: red; display: none; font-size: 1rem;">
+  <p class="shipping-error" >
     Please select a country for shipping before continuing.
   </p></div>
 
@@ -140,7 +140,7 @@
 
     <!-- Inline error message for shipping -->
      <div class="error-wrapper">
-  <p class="shipping-error" style="color: red; display: none; font-size: 1rem;">
+  <p class="shipping-error" >
     Please select a country for shipping before continuing.
   </p></div>
 
@@ -165,7 +165,8 @@
     // Hide error message if a valid option is selected
     select.addEventListener('change', function () {
       if (select.value && error) {
-        error.style.display = 'none';
+        error.classList.remove('visible'); //error.style.display = 'none';
+        
       }
     });
 
@@ -173,7 +174,7 @@
     form.addEventListener('submit', function (e) {
       if (!select.value) {
         e.preventDefault();
-        if (error) error.style.display = 'block';
+        if (error) error.classList.add('visible'); //error.style.display = 'block';
         select.focus();
       }
     });
