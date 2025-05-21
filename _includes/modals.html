@@ -149,7 +149,7 @@
 
 <script>
  document.querySelectorAll('.shipping-select').forEach(select => {
-    const error = select.parentElement.querySelector('.shipping-error');
+    const error = select.closest('.buy-option').querySelector('.shipping-error');
     const form = select.closest('.buy-option').querySelector('form');
 
     // Update label with shipping price
