@@ -1043,6 +1043,16 @@ ul.social-buttons li a:active {
 .shipping-select {
   margin-top: 10px;
   margin-bottom: 12px; /* creates breathing room before error message */
+
+  min-width: 250px; /* fits your default text */
+  max-width: 100%;  /* allows responsiveness */
+  width: 100%;
+  white-space: normal; /* allow wrapping */
+  word-wrap: break-word;
+}
+
+.shipping-select-wrapper { /*stops weird layout shifts*/
+  width: 100%; /* or fixed like 300px if you want stricter control */
 }
 
 
