@@ -85,10 +85,7 @@
       </optgroup>
     </select>
 
-     <!-- Inline error message for shipping -->
-  <p class="shipping-error" style="color: red; display: none; font-size: 0.9rem;">
-    Please select a country for shipping before continuing.
-  </p>
+     
 
   </div>
 
@@ -134,45 +131,52 @@
       </optgroup>
     </select>
 
-    <!-- Inline error message for shipping -->
-  <p class="shipping-error" style="color: red; display: none; font-size: 10px;">
-    Please select a country for shipping before continuing.
-  </p>
-
   </div>
+
+  <!-- Inline error message for shipping//both -->
+      <div class="shipping-errors-container" style="width: 100%; margin-top: 0.5rem;">
+    <p id="error-diy" class="shipping-error" style="color: red; display: none;">Please select a country for shipping (DIY)</p>
+    <p id="error-built" class="shipping-error" style="color: red; display: none;">Please select a country for shipping (Built)</p>
+  </div>
+
 </div>
 
 <script>
- document.querySelectorAll('.shipping-select').forEach(select => {
-    const error = select.parentElement.querySelector('.shipping-error');
-    const form = select.closest('.buy-option').querySelector('form');
+document.querySelectorAll('.buy-option').forEach(option => {
+  // Find the select and form inside this buy-option
+  const select = option.querySelector('.shipping-select');
+  const form = option.querySelector('form');
 
-    // Update label with shipping price
-    select.addEventListener('change', function () {
-      const selected = this.options[this.selectedIndex];
-      const country = selected.textContent.split('–')[0].trim();
-      const price = selected.dataset.price;
-      if (price && !selected.textContent.includes(price)) {
-        selected.textContent = `${country} – ${price}`;
-      }
-    });
+  // Determine which error element to target based on the option's title text
+  const isDIY = option.querySelector('.title').textContent.includes('Without Build');
+  const errorEl = document.getElementById(isDIY ? 'error-diy' : 'error-built');
 
-    // Hide error message if a valid option is selected
-    select.addEventListener('change', function () {
-      if (select.value && error) {
-        error.style.display = 'none';
-      }
-    });
-
-    // Block Buy Now if no selection made, show inline error instead of alert
-    form.addEventListener('submit', function (e) {
-      if (!select.value) {
-        e.preventDefault();
-        if (error) error.style.display = 'block';
-        select.focus();
-      }
-    });
+  // Update shipping price text on select change (same as before)
+  select.addEventListener('change', function () {
+    const selected = this.options[this.selectedIndex];
+    const country = selected.textContent.split('–')[0].trim();
+    const price = selected.dataset.price;
+    if (price && !selected.textContent.includes(price)) {
+      selected.textContent = `${country} – ${price}`;
+    }
   });
+
+  // Hide the external error message when a valid selection is made
+  select.addEventListener('change', function () {
+    if (select.value && errorEl) {
+      errorEl.style.display = 'none';
+    }
+  });
+
+  // On form submit, prevent submit if no selection & show external error message
+  form.addEventListener('submit', function (e) {
+    if (!select.value) {
+      e.preventDefault();
+      if (errorEl) errorEl.style.display = 'block';
+      select.focus();
+    }
+  });
+});
 </script>
 
 
