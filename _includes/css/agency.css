@@ -1055,6 +1055,9 @@ ul.social-buttons li a:active {
   width: 250px; /* or fixed like 300px if you want stricter control */
 }
 
+ option { /*allows wrapping once selected but fixes ovr box width*/
+  white-space: normal;
+}
 
 
 
