@@ -960,7 +960,7 @@ ul.social-buttons li a:active {
 .buy-row-wrapper {
   display: flex;
   justify-content: center;  /* center entire row horizontally */
-  align-items: flex-start; flex-start; /* NOT center, to avoid vertical drift */     /* vertically align button content */
+  align-items: center; /* vertically align button content */
   gap: 7vw;                /* space between buy-options and divider */
   margin-top: 40px;
   position: relative;
@@ -972,6 +972,8 @@ ul.social-buttons li a:active {
   align-items: center;
   width: 250px; /*error message content pushing max-content so test with 250px*/
   margin: 0 10px;           /* spacing around each button */
+
+  min-height: 240px; /*testing for misalignment*/
 }
 
 .btn-buy {
