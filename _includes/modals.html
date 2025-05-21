@@ -86,9 +86,10 @@
     </select>
 
      <!-- Inline error message for shipping -->
+      <div class="error-wrapper">
   <p class="shipping-error" style="color: red; display: none; font-size: 0.9rem;">
     Please select a country for shipping before continuing.
-  </p>
+  </p></div>
 
   </div>
 
@@ -135,9 +136,10 @@
     </select>
 
     <!-- Inline error message for shipping -->
+     <div class="error-wrapper">
   <p class="shipping-error" style="color: red; display: none; font-size: 10px;">
     Please select a country for shipping before continuing.
-  </p>
+  </p></div>
 
   </div>
 </div>
@@ -173,23 +175,6 @@
       }
     });
   });
-
-
-
-
-  form.addEventListener('submit', function (e) {
-  if (!select.value) {
-    e.preventDefault();
-    if (error) error.classList.add('visible');
-    select.focus();
-  }
-});
-
-select.addEventListener('change', function () {
-  if (select.value && error) {
-    error.classList.remove('visible');
-  }
-});
 </script>
 
 

@@ -1032,22 +1032,11 @@ ul.social-buttons li a:active {
     color: #1E2A38; /* Navy text on cream */
 }
 
-.shipping-select { /*select padding to help jumpy*/
-  margin-top: 10px;
-  width: 220x;
-  font-size: 14px;
-}
-
-.shipping-error {
-  height: 1.2em; /* Ensures vertical space is always reserved */
-  margin-top: 5px;
-  color: red;
-  font-size: 0.9rem;
-  display: block;
-  visibility: hidden;
-}
-.shipping-error.visible {
-  visibility: visible;
+.error-wrapper { /*stops erros being jumpy and affecting each other*/
+  height: 20px; /* or slightly more than your error message's line-height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
