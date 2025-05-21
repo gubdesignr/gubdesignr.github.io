@@ -132,12 +132,23 @@
 
 <script>
   document.querySelectorAll('.shipping-select').forEach(select => {
+    // Update label with shipping price
     select.addEventListener('change', function () {
       const selected = this.options[this.selectedIndex];
       const country = selected.textContent.split('–')[0].trim();
       const price = selected.dataset.price;
       if (price && !selected.textContent.includes(price)) {
         selected.textContent = `${country} – ${price}`;
+      }
+    });
+
+    // Block Buy Now if no selection made
+    const form = select.closest('.buy-option').querySelector('form');
+    form.addEventListener('submit', function (e) {
+      if (!select.value) {
+        e.preventDefault();
+        alert('Please select a country for shipping before continuing.');
+        select.focus();
       }
     });
   });
