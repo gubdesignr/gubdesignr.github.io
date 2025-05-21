@@ -1034,7 +1034,7 @@ ul.social-buttons li a:active {
 
 .shipping-select { /*select padding to help jumpy*/
   margin-top: 10px;
-  width: 160px;
+  width: 220x;
   font-size: 14px;
 }
 
@@ -1044,7 +1044,6 @@ ul.social-buttons li a:active {
   color: red;
   font-size: 0.9rem;
   display: block;
-  visibility: hidden;
 }
 .shipping-error.visible {
   visibility: visible;
