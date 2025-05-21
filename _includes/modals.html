@@ -84,6 +84,12 @@
         <option data-price="£80">🇺🇸 USA</option>
       </optgroup>
     </select>
+
+     <!-- Inline error message for shipping -->
+  <p class="shipping-error" style="color: red; display: none; font-size: 0.9rem;">
+    Please select a country for shipping before continuing.
+  </p>
+
   </div>
 
   <div class="divider"></div>
@@ -126,12 +132,21 @@
         <option data-price="£80">🇨🇦 Canada</option>
         <option data-price="£80">🇺🇸 USA</option>
       </optgroup>
+
+       <!-- Inline error message for shipping -->
+  <p class="shipping-error" style="color: red; display: none; font-size: 0.9rem;">
+    Please select a country for shipping before continuing.
+  </p>
+
     </select>
   </div>
 </div>
 
 <script>
-  document.querySelectorAll('.shipping-select').forEach(select => {
+ document.querySelectorAll('.shipping-select').forEach(select => {
+    const error = select.parentElement.querySelector('.shipping-error');
+    const form = select.closest('.buy-option').querySelector('form');
+
     // Update label with shipping price
     select.addEventListener('change', function () {
       const selected = this.options[this.selectedIndex];
@@ -142,12 +157,18 @@
       }
     });
 
-    // Block Buy Now if no selection made
-    const form = select.closest('.buy-option').querySelector('form');
+    // Hide error message if a valid option is selected
+    select.addEventListener('change', function () {
+      if (select.value && error) {
+        error.style.display = 'none';
+      }
+    });
+
+    // Block Buy Now if no selection made, show inline error instead of alert
     form.addEventListener('submit', function (e) {
       if (!select.value) {
         e.preventDefault();
-        alert('Please select a country for shipping before continuing.');
+        if (error) error.style.display = 'block';
         select.focus();
       }
     });
