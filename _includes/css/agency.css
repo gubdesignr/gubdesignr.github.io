@@ -1046,15 +1046,22 @@ ul.social-buttons li a:active {
 }
 .shipping-error { /*replaces inline style*/
   color: red;
-  font-size: 1rem;
+  font-size: 0.95rem;
   visibility: hidden; /* keeps layout consistent */
   margin: 0;
   text-align: center;
+
+  min-height: 2.5em; /* enough space for 2 lines */
 }
 
 .shipping-error.visible {
   visibility: visible;
 }
+
+
+
+
+
 
 
 .shipping-select-wrapper {
