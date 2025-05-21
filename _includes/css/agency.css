@@ -1052,7 +1052,7 @@ ul.social-buttons li a:active {
 }
 
 .shipping-select-wrapper { /*stops weird layout shifts*/
-  width: 100%; /* or fixed like 300px if you want stricter control */
+  width: 250px; /* or fixed like 300px if you want stricter control */
 }
 
 
