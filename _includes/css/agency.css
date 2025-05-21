@@ -1037,6 +1037,12 @@ ul.social-buttons li a:active {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10px; /* pushes it away from the Buy button */
+}
+
+.shipping-select {
+  margin-top: 10px;
+  margin-bottom: 12px; /* creates breathing room before error message */
 }
 
 
