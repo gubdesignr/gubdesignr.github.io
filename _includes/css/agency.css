@@ -1032,6 +1032,9 @@ ul.social-buttons li a:active {
     color: #1E2A38; /* Navy text on cream */
 }
 
+
+
+
 .error-wrapper { /*stops erros being jumpy and affecting each other*/
   height: 20px; /* or slightly more than your error message's line-height */
   display: flex;
@@ -1040,23 +1043,29 @@ ul.social-buttons li a:active {
   margin-bottom: 10px; /* pushes it away from the Buy button */
 }
 
+
+.shipping-select-wrapper {
+  width: 250px; /*  Fixed width */
+  overflow: hidden;
+  position: relative;
+}
+
 .shipping-select {
   margin-top: 10px;
-  margin-bottom: 12px; /* creates breathing room before error message */
+  margin-bottom: 12px;
 
-  min-width: 250px; /* fits your default text */
-  max-width: 100%;  /* allows responsiveness */
-  width: 100%;
-  white-space: normal; /* allow wrapping */
-  word-wrap: break-word;
+  width: 250px; /* fixed box width */
+  white-space: nowrap; /* force single line */
+  overflow: hidden; /* cuts too long overflowing text */
+  text-overflow: ellipsis; /* replaces with ... if too long */
+
+  display: inline-block;
 }
 
-.shipping-select-wrapper { /*stops weird layout shifts*/
-  width: 250px; /* or fixed like 300px if you want stricter control */
-}
 
- option { /*allows wrapping once selected but fixes ovr box width*/
+ option { /*allows wrapping in popup */
   white-space: normal;
+  word-break: break-word;
 }
 
 
