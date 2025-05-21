@@ -54,33 +54,33 @@
     </form>
     <!-- Dropdown below DIY button -->
     <select class="shipping-select">
-      <option>🇬🇧 United Kingdom & Northern Ireland – £20</option>
+      <option data-price="£20">🇬🇧 United Kingdom & Northern Ireland</option>
 
       <optgroup label="🌏 Asia-Pacific - £65">
-        <option>🇸🇬 Singapore</option>
-        <option>🇭🇰 Hong Kong</option>
-        <option>🇹🇭 Thailand</option>
-        <option>🇦🇺 Australia</option>
-        <option>🇳🇿 New Zealand</option>
+        <option data-price="£65">🇸🇬 Singapore</option>
+        <option data-price="£65">🇭🇰 Hong Kong</option>
+        <option data-price="£65">🇹🇭 Thailand</option>
+        <option data-price="£65">🇦🇺 Australia</option>
+        <option data-price="£65">🇳🇿 New Zealand</option>
       </optgroup>
 
       <optgroup label="🇪🇺 Europe - £52.10">
-        <option>🇩🇪 Germany</option>
-        <option>🇫🇷 France</option>
-        <option>🇪🇸 Spain (Mainland Only)</option>
-        <option>🇮🇹 Italy</option>
+        <option data-price="£52.10">🇩🇪 Germany</option>
+        <option data-price="£52.10">🇫🇷 France</option>
+        <option data-price="£52.10">🇪🇸 Spain (Mainland Only)</option>
+        <option data-price="£52.10">🇮🇹 Italy</option>
       </optgroup>
 
       <optgroup label="🇪🇺 Scandinavia - £62">
-        <option>🇩🇰 Norway</option>
-        <option>🇳🇴 Denmark</option>
-        <option>🇸🇪 Sweden</option>
-        <option>🇫🇮 Finland</option>
+        <option data-price="£62">🇩🇰 Norway</option>
+        <option data-price="£62">🇳🇴 Denmark</option>
+        <option data-price="£62">🇸🇪 Sweden</option>
+        <option data-price="£62">🇫🇮 Finland</option>
       </optgroup>
 
       <optgroup label="🌎 North America - £80">
-        <option>🇨🇦 Canada</option>
-        <option>🇺🇸 USA</option>
+        <option data-price="£80">🇨🇦 Canada</option>
+        <option data-price="£80">🇺🇸 USA</option>
       </optgroup>
     </select>
   </div>
@@ -96,37 +96,50 @@
     </form>
     <!-- Dropdown below Built button -->
     <select class="shipping-select">
-      <option>🇬🇧 United Kingdom & Northern Ireland – £20</option>
+      <option data-price="£20">🇬🇧 United Kingdom & Northern Ireland</option>
 
       <optgroup label="🌏 Asia-Pacific - £65">
-        <option>🇸🇬 Singapore</option>
-        <option>🇭🇰 Hong Kong</option>
-        <option>🇹🇭 Thailand</option>
-        <option>🇦🇺 Australia</option>
-        <option>🇳🇿 New Zealand</option>
+        <option data-price="£65">🇸🇬 Singapore</option>
+        <option data-price="£65">🇭🇰 Hong Kong</option>
+        <option data-price="£65">🇹🇭 Thailand</option>
+        <option data-price="£65">🇦🇺 Australia</option>
+        <option data-price="£65">🇳🇿 New Zealand</option>
       </optgroup>
 
       <optgroup label="🇪🇺 Europe - £52.10">
-        <option>🇩🇪 Germany</option>
-        <option>🇫🇷 France</option>
-        <option>🇪🇸 Spain (Mainland Only)</option>
-        <option>🇮🇹 Italy</option>
+        <option data-price="£52.10">🇩🇪 Germany</option>
+        <option data-price="£52.10">🇫🇷 France</option>
+        <option data-price="£52.10">🇪🇸 Spain (Mainland Only)</option>
+        <option data-price="£52.10">🇮🇹 Italy</option>
       </optgroup>
 
       <optgroup label="🇪🇺 Scandinavia - £62">
-        <option>🇩🇰 Norway</option>
-        <option>🇳🇴 Denmark</option>
-        <option>🇸🇪 Sweden</option>
-        <option>🇫🇮 Finland</option>
+        <option data-price="£62">🇩🇰 Norway</option>
+        <option data-price="£62">🇳🇴 Denmark</option>
+        <option data-price="£62">🇸🇪 Sweden</option>
+        <option data-price="£62">🇫🇮 Finland</option>
       </optgroup>
 
       <optgroup label="🌎 North America - £80">
-        <option>🇨🇦 Canada</option>
-        <option>🇺🇸 USA</option>
+        <option data-price="£80">🇨🇦 Canada</option>
+        <option data-price="£80">🇺🇸 USA</option>
       </optgroup>
     </select>
   </div>
 </div>
+
+<script>
+  document.querySelectorAll('.shipping-select').forEach(select => {
+    select.addEventListener('change', function () {
+      const selected = this.options[this.selectedIndex];
+      const country = selected.textContent.split('–')[0].trim();
+      const price = selected.dataset.price;
+      if (price && !selected.textContent.includes(price)) {
+        selected.textContent = `${country} – ${price}`;
+      }
+    });
+  });
+</script>
 
 
 <!-- Line break for spacing between buttons -->
