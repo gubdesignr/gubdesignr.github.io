@@ -178,19 +178,6 @@
       }
     });
   });
-
-
-  // NEW: Adds price *and* truncates long country labels when selected
-  select.addEventListener('change', function () {
-    const selected = this.options[this.selectedIndex];
-    const fullLabel = selected.textContent.split('–')[0].trim(); // same as before
-    const price = selected.dataset.price;
-
-    // Only truncate and update once to avoid stacking multiple prices
-    if (price && !selected.textContent.includes(price)) {
-      selected.textContent = truncateLabel(fullLabel, price); // ✅ Ensures suffix is visible
-    }
-  });
 </script>
 
 
