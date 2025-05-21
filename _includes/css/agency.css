@@ -1039,11 +1039,12 @@ ul.social-buttons li a:active {
 }
 
 .shipping-error {
-  height: 1.2em; /* Ensures vertical space is always reserved less jump w error */
+  height: 1.2em; /* Ensures vertical space is always reserved */
   margin-top: 5px;
   color: red;
   font-size: 0.9rem;
   display: block;
+  visibility: hidden;
 }
 .shipping-error.visible {
   visibility: visible;

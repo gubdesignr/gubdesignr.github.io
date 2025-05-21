@@ -173,6 +173,23 @@
       }
     });
   });
+
+
+
+
+  form.addEventListener('submit', function (e) {
+  if (!select.value) {
+    e.preventDefault();
+    if (error) error.classList.add('visible');
+    select.focus();
+  }
+});
+
+select.addEventListener('change', function () {
+  if (select.value && error) {
+    error.classList.remove('visible');
+  }
+});
 </script>
 
 
