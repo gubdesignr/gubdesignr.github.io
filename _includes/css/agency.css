@@ -956,21 +956,21 @@ ul.social-buttons li a:active {
 }
 
 
-/* General layout */
+/* Wrapper layout */
 .buy-row-wrapper {
   display: flex;
   justify-content: center;
-  align-items: stretch; /* ensures both columns are same height */
-  gap: 0;
-  border: 1px solid #ccc;
+  align-items: stretch;
   background-color: #f9f9f9;
   border-radius: 8px;
   overflow: hidden;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px; /* Optional outer padding */
+  gap: 40px; /* Adds 40px space between each card and divider */
 }
 
-/* Buy option cards */
+/* Each buy card */
 .buy-option {
   flex: 1;
   background-color: #f0f0f0;
@@ -980,15 +980,17 @@ ul.social-buttons li a:active {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  border-radius: 6px;
 }
 
-/* Vertical divider */
+/* Divider styling */
 .divider {
   width: 1px;
   background-color: #ccc;
+  flex-shrink: 0;
 }
 
-/* Text styling */
+/* Typography */
 .title {
   font-size: 1.25rem;
   font-weight: bold;
@@ -1027,14 +1029,13 @@ ul.social-buttons li a:active {
   box-sizing: border-box;
 }
 
-/* Error message wrapper - reserve space */
+/* Reserve space for error */
 .error-wrapper {
-  min-height: 1.2em; /* height of one line of text */
+  min-height: 1.2em;
   width: 100%;
   text-align: center;
 }
 
-/* Error message */
 .shipping-error {
   color: red;
   font-size: 0.9rem;
@@ -1042,15 +1043,16 @@ ul.social-buttons li a:active {
   margin-top: 5px;
 }
 
-/* When error is shown */
 .shipping-error.visible {
   display: block;
 }
 
-/* Responsive design */
+/* Responsive layout */
 @media (max-width: 768px) {
   .buy-row-wrapper {
     flex-direction: column;
+    gap: 20px;
+    padding: 0;
   }
 
   .divider {
