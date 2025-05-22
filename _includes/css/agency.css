@@ -1037,7 +1037,7 @@ ul.social-buttons li a:active {
 
 
 .error-wrapper { /*stops erros being jumpy and affecting each other*/
-  height: 24px; /* or slightly more than your error message's line-height */
+  height: 28px; /* or slightly more than your error message's line-height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1126,11 +1126,13 @@ ul.social-buttons li a:active {
 ::-moz-selection {
     text-shadow: none;
     background: #EADCC5;
+    color: #EADCC5;
 }
 
 ::selection {
     text-shadow: none;
     background: #EADCC5;
+    color: #EADCC5;
 }
 
 img::selection {
