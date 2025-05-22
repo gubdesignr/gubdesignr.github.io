@@ -1043,7 +1043,7 @@ ul.social-buttons li a:active {
   justify-content: center;
   margin-bottom: 10px; /* pushes it away from the Buy button */
 
-   height: 28px; /*never getting height change test*/
+   height: 14px; /*never getting height change test*/
 }
 .shipping-error { /*replaces inline style*/
   color: red;
