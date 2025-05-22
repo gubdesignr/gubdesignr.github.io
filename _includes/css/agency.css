@@ -977,7 +977,7 @@ ul.social-buttons li a:active {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); 
   display: grid;
   
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: 40px 30px 48px 28px 50px; /*this was all auto*/
   justify-items: center; /* Centers child elements horizontally */
   align-content: center; /* Vertically centers the whole grid within this card */
 
