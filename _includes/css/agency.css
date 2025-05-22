@@ -1057,7 +1057,7 @@ ul.social-buttons li a:active {
   font-size: 0.95rem;
   visibility: hidden;
   min-height: 2.5em;
-  margin-top: 4px;/*error msg space*/
+  margin-top: 10px;/*error msg space*/
   text-align: center;
 }
 
