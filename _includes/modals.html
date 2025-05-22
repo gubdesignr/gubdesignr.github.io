@@ -46,6 +46,7 @@
 
 <div class="buy-row-wrapper">
   <!-- DIY Option -->
+   <div class="buy-card">
   <div class="buy-option">
     <p class="title">Without Build</p>
     <p class="price">{{ product.price_diy }}</p>
@@ -91,10 +92,11 @@
   <p class="shipping-error" >
     Please select a country for shipping before continuing.
   </p></div>
-  </div>
+  </div></div>
 
   <div class="divider"></div>
   <!-- Built Option -->
+   <div class="buy-card">
   <div class="buy-option">
     <p class="title">With Build</p>
     <p class="price">{{ product.price_built }}</p>
@@ -140,7 +142,8 @@
   <p class="shipping-error" >
     Please select a country for shipping before continuing.
   </p></div>
-  </div>
+  </div></div>
+  
 </div>
 
 <script>
