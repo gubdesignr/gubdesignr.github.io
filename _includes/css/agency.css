@@ -958,7 +958,7 @@ ul.social-buttons li a:active {
 /*modal buy now alignments*/ 
 .buy-row-wrapper {
   display: grid;
-  grid-template-columns: 1fr auto 1fr; /* Two cards and a divider */
+  grid-template-columns: 1fr auto 1fr; /* Equal width cards with center divider */
   justify-content: center;
   align-items: stretch;
   gap: 7vw;
@@ -972,7 +972,7 @@ ul.social-buttons li a:active {
   align-items: center;
 
   width: 250px;
-  margin: 0 10px;
+  margin: 0;
   min-height: 260px;
   height: 100%;
   overflow: visible;
@@ -1044,7 +1044,7 @@ ul.social-buttons li a:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 20px; /* Increased margin for space under dropdown */
   margin-bottom: 10px;
 }
 
@@ -1066,23 +1066,25 @@ ul.social-buttons li a:active {
   overflow: hidden;
   position: relative;
   background-color: #f9f9f9;
-  border-radius: 6px;
+  border-radius: 0px; /* Hard edges */
   margin-top: 10px;
 }
 
 .shipping-select {
   width: 100%;
   font-size: 14px;
-  padding: 10px 12px;
+  padding: 8px 12px; /* Reduced height */
   background-color: #f9f9f9;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 0px; /* Hard edges */
   appearance: none;
   cursor: pointer;
   box-sizing: border-box;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: 38px;
+  line-height: 1.4;
 }
 
 .shipping-select:focus {
@@ -1133,10 +1135,11 @@ option {
   .shipping-select {
     width: 100%;
     font-size: 14px;
-    padding: 10px;
-    border-radius: 6px;
+    padding: 8px 10px;
+    border-radius: 0px;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
+    height: 38px;
   }
 
   .btn-buy {
