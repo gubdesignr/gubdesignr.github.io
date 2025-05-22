@@ -989,7 +989,8 @@ ul.social-buttons li a:active {
   /* min-height: 260px; 
   height: 100%; */
   box-sizing: border-box;
-  margin: 0 10px;
+
+   /* margin: 0 10px; */ /* removed for grid row alignment */
 }
 
 .title, .price {
@@ -1053,8 +1054,8 @@ ul.social-buttons li a:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
-  /*margin-bottom: 10px; remove testing bottom of card*/
+ /* margin-top: 10px; */ /* removed for grid row alignment */
+  /* margin-bottom: 10px; */ /* removed for grid row alignment */
   text-align: center;
 }
 
@@ -1063,7 +1064,7 @@ ul.social-buttons li a:active {
   font-size: 0.95rem;
   visibility: hidden;
   min-height: 2.5em;
-  /*margin-top: 10px;error msg space*/
+   /* margin-top: 10px; */ /* removed for grid row alignment */
   text-align: center;
 }
 
@@ -1075,11 +1076,11 @@ ul.social-buttons li a:active {
   width: 250px;
   overflow: hidden;
   position: relative;
-  margin-top: 10px;
+   /* margin-top: 10px; */ /* removed for grid row alignment */
 }
 
 .shipping-select {
-  margin-bottom: 4px;
+    /* margin-bottom: 4px; */ /* removed for grid row alignment */
   width: 100%;
   font-size: 14px; 
   padding: 1px 2px; /*2/4 change*/
