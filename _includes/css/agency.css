@@ -955,28 +955,32 @@ ul.social-buttons li a:active {
     color: #1E2A38;  /* Change this to your preferred text color (e.g., dark grey or black) */
 }
 
-
-/*modal buy now alignments*/
+/*modal buy now alignments*/ 
 .buy-row-wrapper {
-  display: flex;
-  justify-content: center;  /* center entire row horizontally */
- /* align-items: center;  vertically align button content */
-  gap: 7vw;                /* space between buy-options and divider */
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* two cards and a divider */
+  justify-content: center;
+  align-items: stretch;
+  gap: 7vw;
   margin-top: 40px;
   position: relative;
-
-    align-items: stretch; /* force all children to same height - alignment test*/
 }
 
 .buy-option {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 250px; /*error message content pushing max-content so test with 250px*/
-  margin: 0 10px;           /* spacing around each button */
 
-  min-height: 260px; /*testing for misalignment*/
-  height: 100%; /*misalignment fix */
+  width: 250px;
+  margin: 0 10px;
+  min-height: 260px;
+  height: 100%;
+  overflow: visible;
+
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
 .btn-buy {
@@ -1000,61 +1004,55 @@ ul.social-buttons li a:active {
   width: 150px;
   font-weight: bold;
   font-size: 16px;
-
   line-height: 0;
 }
 
 .price {
-  font-weight: normal;  /* overwrite*/
+  font-weight: normal;
   font-size: 15px;
 }
 
 .divider {
   position: absolute;
-  top: 0; /* vertical centering*/
-  height: 85%; 
-  left: 50%; /*horizontal centering*/
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 85%;
   width: 1px;
   background-color: #ccc;
-  transform: translateX(-50%); /*when changing heights to align use translateY(-50%);*/
 }
-.btn-divider-centered { /*default close button centering*/
+
+.btn-divider-centered {
   display: block;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  /*margin-top: 30px;  Adjust as needed */
 }
-
 
 .btn-buy:hover,
 .btn-buy:focus,
 .btn-buy:active,
 .btn-buy.active {
-    background-color: #EADCC5; /* Cream hover */
-    border-color: #EADCC5;
-    color: #1E2A38; /* Navy text on cream */
+  background-color: #EADCC5;
+  border-color: #EADCC5;
+  color: #1E2A38;
 }
 
-
-
-
-.error-wrapper { /*stops erros being jumpy and affecting each other*/
-  height: 28px; /* or slightly more than your error message's line-height */
+.error-wrapper {
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;  /*pushes it away from the Buy button this is the bottom thing so wtf*/
-
+  margin-bottom: 10px;
 }
-.shipping-error { /*replaces inline style*/
+
+.shipping-error {
   color: red;
   font-size: 0.95rem;
-  visibility: hidden; /* keeps layout consistent */
+  visibility: hidden;
   margin: 0;
   text-align: center;
-
-  min-height: 2.5em; /* enough space for 2 lines */
+  min-height: 2.5em;
 }
 
 .shipping-error.visible {
@@ -1062,7 +1060,7 @@ ul.social-buttons li a:active {
 }
 
 .shipping-select-wrapper {
-  width: 250px; /*  Fixed width */
+  width: 250px;
   overflow: hidden;
   position: relative;
 }
@@ -1070,19 +1068,14 @@ ul.social-buttons li a:active {
 .shipping-select {
   margin-top: 10px;
   margin-bottom: 12px;
-
-  width: 250px; /* fixed box width */
-  white-space: nowrap; /* force single line */
-  overflow: hidden; /* cuts too long overflowing text */
-  text-overflow: ellipsis; /* replaces with ... if too long */
-
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   display: inline-block;
-
-  width: 100%; /*new align test*/
 }
 
-
- option { /*allows wrapping in popup */
+option {
   white-space: normal;
   word-break: break-word;
 }
@@ -1091,6 +1084,7 @@ ul.social-buttons li a:active {
 @media (max-width: 600px) {
   .buy-row-wrapper {
     flex-direction: column;
+    display: flex;
     align-items: center;
     gap: 30px;
     margin-top: 20px;
@@ -1103,15 +1097,6 @@ ul.social-buttons li a:active {
   .buy-option {
     width: 90%;
     max-width: 320px;
-    background-color: #f9f9f9; /* light cream or soft gray for card */
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    overflow: visible;
   }
 
   .title, .price {
@@ -1136,8 +1121,6 @@ ul.social-buttons li a:active {
     width: 100%;
     font-size: 16px;
     padding: 12px;
-    background-color: #1E2A38;
-    color: white;
     border-radius: 6px;
     font-weight: bold;
     margin-top: 10px;
@@ -1155,7 +1138,7 @@ ul.social-buttons li a:active {
     font-size: 0.9rem;
     color: red;
     visibility: hidden;
-    height: 24px; /* reserve space to avoid shifting layout */
+    height: 24px;
   }
 
   .shipping-error.visible {
