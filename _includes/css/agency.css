@@ -973,7 +973,6 @@ ul.social-buttons li a:active {
 /* Each buy card */
 .buy-option {
   flex: 1;
-  background-color: #f0f0f0;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
@@ -986,7 +985,7 @@ ul.social-buttons li a:active {
 /* Divider styling */
 .divider {
   width: 1px;
-  background-color: #ccc;
+  background-color: #f0f0f0;
   flex-shrink: 0;
 }
 
@@ -1004,7 +1003,7 @@ ul.social-buttons li a:active {
 
 /* Buy button */
 .btn-buy {
-  background-color: #007bff;
+  background-color: #1E2A38;
   color: white;
   border: none;
   padding: 10px 18px;
@@ -1025,6 +1024,7 @@ ul.social-buttons li a:active {
   padding: 8px;
   font-size: 0.95rem;
   border: 1px solid #ccc;
+  background-color: #f0f0f0;
   border-radius: 4px;
   box-sizing: border-box;
 }
