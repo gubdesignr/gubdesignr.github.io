@@ -1048,7 +1048,7 @@ ul.social-buttons li a:active {
   align-items: center;
   justify-content: center;
   margin-top: 8px;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px; remove testing bottom of card*/
   text-align: center;
 }
 
