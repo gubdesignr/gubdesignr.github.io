@@ -973,7 +973,8 @@ ul.social-buttons li a:active {
   width: 250px; /*error message content pushing max-content so test with 250px*/
   margin: 0 10px;           /* spacing around each button */
 
-  min-height: 240px; /*testing for misalignment*/
+  min-height: 260px; /*testing for misalignment*/
+ justify-content: space-between; /* Ensures even distribution */
 }
 
 .btn-buy {
