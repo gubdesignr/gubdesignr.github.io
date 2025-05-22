@@ -995,6 +995,10 @@ ul.social-buttons li a:active {
   background-color: #ccc;
   margin: 0 60px;
   flex-shrink: 0;
+
+  top: 5%;                /* 5 % inset from the top */
+  bottom: 5%;             /* 5 % inset from the bottom → makes it 90 % tall */
+
 }
 
 /* Typography */
