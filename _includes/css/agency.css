@@ -1074,7 +1074,7 @@ ul.social-buttons li a:active {
   margin-bottom: 4px;
   width: 100%;
   font-size: 14px; 
-  padding: 2px 4px; /*4/6 change*/
+  padding: 1px 2px; /*2/4 change*/
   box-sizing: border-box;
   border-radius: 0;
   border: 1px solid #ccc;
