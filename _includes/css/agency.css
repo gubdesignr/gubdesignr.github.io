@@ -958,52 +958,49 @@ ul.social-buttons li a:active {
 
 
 
-/* Modal wrapper and card alignment */
+/* Wrapper for both cards and divider */
 .buy-row-wrapper {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 80px; /* 40px each side of the divider */
+  gap: 80px; /* 40px each side of divider */
   margin-top: 40px;
   position: relative;
 }
 
-/* Divider stays dead center of page */
+/* Divider centered vertically between cards */
 .divider {
   width: 1px;
   background-color: #ccc;
-  height: 85%;
   align-self: stretch;
 }
 
-/* Card styling */
+/* Card container */
 .buy-option {
   background-color: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  padding: 20px 0 0 0; /* top only */
   width: 280px;
-  min-height: 240px;
-  box-sizing: border-box;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 12px; /* consistent spacing between ALL elements */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  gap: 12px;
+  flex-grow: 1;
 }
 
-
-/* Title & Price Text */
+/* Text elements */
 .title,
 .price {
   margin: 0;
   padding: 0;
   text-align: center;
+  width: 150px;
   font-size: 16px;
   line-height: 1.4;
-  width: 150px;
-  white-space: nowrap;
+  font-weight: bold;
 }
 
 .price {
@@ -1011,7 +1008,7 @@ ul.social-buttons li a:active {
   font-size: 15px;
 }
 
-/* Buy Button */
+/* Buy button */
 .btn-buy {
   width: 100px;
   background-color: #1E2A38;
@@ -1034,44 +1031,44 @@ ul.social-buttons li a:active {
   color: #1E2A38;
 }
 
-/* Shipping dropdown wrapper */
+/* Dropdown wrapper */
 .shipping-select-wrapper {
   width: 250px;
-  overflow: hidden;
   position: relative;
 }
 
-/* Dropdown styling */
+/* Dropdown style */
 .shipping-select {
   width: 100%;
   font-size: 14px;
-  padding: 1px 2px;
+  padding: 2px 4px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   background-color: #f9f9f9;
   border-radius: 0;
 }
 
-/* Error display */
+/* Error wrapper below dropdown */
 .error-wrapper {
   height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
+/* Error message styling */
 .shipping-error {
   color: red;
   font-size: 0.95rem;
-  visibility: hidden;
-  min-height: 2.5em;
   text-align: center;
+  visibility: hidden;
+  height: 2.5em;
 }
 
 .shipping-error.visible {
   visibility: visible;
 }
+
 
 /* Modal close button position fix */
 .btn-divider-centered {
