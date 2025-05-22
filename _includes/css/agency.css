@@ -1124,6 +1124,8 @@ ul.social-buttons li a:active {
     padding: 8px;
     margin: 10px 0;
     box-sizing: border-box;
+
+    visibility: visible;
   }
 
   .btn-buy {
