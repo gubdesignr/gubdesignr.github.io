@@ -957,22 +957,21 @@ ul.social-buttons li a:active {
 
 
 
-
-/* Wrapper for both cards and divider */
+/* Container for both cards and divider */
 .buy-row-wrapper {
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  gap: 80px; /* 40px each side of divider */
+  align-items: flex-start;
+  gap: 80px; /* space between the cards, includes 1px divider */
   margin-top: 40px;
   position: relative;
 }
 
-/* Divider centered vertically between cards */
+/* Vertical divider between the cards */
 .divider {
   width: 1px;
   background-color: #ccc;
-  align-self: stretch;
+  height: 100%;
 }
 
 /* Card container */
@@ -981,177 +980,90 @@ ul.social-buttons li a:active {
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   width: 280px;
+  padding: 30px 20px 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  gap: 20px; /* consistent vertical spacing */
   box-sizing: border-box;
-  gap: 12px;
-  flex-grow: 1;
 }
 
-/* Text elements */
-.title,
+/* Title styling */
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #1E2A38;
+}
+
+/* Price styling */
 .price {
   margin: 0;
-  padding: 0;
-  text-align: center;
-  width: 150px;
   font-size: 16px;
-  line-height: 1.4;
-  font-weight: bold;
-}
-
-.price {
   font-weight: normal;
-  font-size: 15px;
+  color: #1E2A38;
+  text-align: center;
 }
 
 /* Buy button */
 .btn-buy {
-  width: 100px;
+  width: 120px;
   background-color: #1E2A38;
   color: white;
   border: none;
-  padding: 11px 0;
-  cursor: pointer;
+  padding: 10px 0;
   font-size: 16px;
   font-weight: bold;
   border-radius: 4px;
+  cursor: pointer;
   text-align: center;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-buy:hover,
 .btn-buy:focus,
-.btn-buy:active,
-.btn-buy.active {
+.btn-buy:active {
   background-color: #EADCC5;
-  border-color: #EADCC5;
   color: #1E2A38;
 }
 
 /* Dropdown wrapper */
 .shipping-select-wrapper {
-  width: 250px;
-  position: relative;
+  width: 100%;
 }
 
-/* Dropdown style */
+/* Dropdown menu */
 .shipping-select {
   width: 100%;
+  padding: 6px 8px;
   font-size: 14px;
-  padding: 2px 4px;
-  box-sizing: border-box;
   border: 1px solid #ccc;
   background-color: #f9f9f9;
-  border-radius: 0;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-/* Error wrapper below dropdown */
+/* Error wrapper */
 .error-wrapper {
   height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 /* Error message styling */
 .shipping-error {
   color: red;
   font-size: 0.95rem;
-  text-align: center;
   visibility: hidden;
-  height: 2.5em;
+  min-height: 1em;
+  text-align: center;
 }
 
 .shipping-error.visible {
   visibility: visible;
-}
-
-
-/* Modal close button position fix */
-.btn-divider-centered {
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Mobile layout: stacked cards */
-@media (max-width: 600px) {
-  .buy-row-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin-top: 20px;
-  }
-
-  .divider {
-    display: none;
-  }
-
-  .buy-option,
-  .buy-card-wrapper {
-    width: 90%;
-    max-width: 320px;
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .title, .price {
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.4;
-    margin: 5px 0;
-  }
-
-  .shipping-select-wrapper,
-  .shipping-select {
-    width: 100%;
-    max-width: 260px;
-    font-size: 14px;
-    padding: 8px;
-    margin: 10px 0;
-    box-sizing: border-box;
-  }
-
-  .btn-buy {
-    width: 100%;
-    font-size: 16px;
-    padding: 12px;
-    background-color: #1E2A38;
-    color: white;
-    border-radius: 6px;
-    font-weight: bold;
-    margin-top: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-
-  .error-wrapper {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    height: 24px;
-    text-align: center;
-  }
-
-  .shipping-error {
-    font-size: 0.9rem;
-    color: red;
-    visibility: hidden;
-    height: 24px;
-  }
-
-  .shipping-error.visible {
-    visibility: visible;
-  }
 }
 
 
