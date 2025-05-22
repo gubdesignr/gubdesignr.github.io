@@ -994,11 +994,6 @@ ul.social-buttons li a:active {
    /* margin: 0 10px; */ /* removed for grid row alignment */
 }
 
-.title { grid-row: 1; }
-.price { grid-row: 2; }
-form   { grid-row: 3; }
-.shipping-select-wrapper { grid-row: 4; }
-.error-wrapper { grid-row: 5; }
 
 .title, .price {
   margin: 0;
