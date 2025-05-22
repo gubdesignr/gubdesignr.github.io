@@ -959,16 +959,18 @@ ul.social-buttons li a:active {
 
 
 
-
+/* Container that holds both cards */
 .buy-row-wrapper {
   display: flex;
   justify-content: center;
   align-items: stretch;
   position: relative;
   margin-top: 40px;
-  gap: 100px; /* 50px space on each side of the divider */
+  gap: 100px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
+/* Each individual card */
 .buy-card-wrapper {
   background-color: #f9f9f9;
   border-radius: 12px;
@@ -977,16 +979,102 @@ ul.social-buttons li a:active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 250px;
-  min-height: 260px;
+  width: 300px;
   box-sizing: border-box;
 }
 
+/* Inner content inside each card */
+.buy-option {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title (e.g. 'With Build') */
+.buy-option .title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Price text */
+.buy-option .price {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* Buy Now button */
+.btn-buy {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-buy:hover {
+  background-color: #005ac1;
+}
+
+/* Select shipping dropdown wrapper */
+.shipping-select-wrapper {
+  margin-top: 12px;
+  width: 100%;
+}
+
+/* The dropdown itself */
+.shipping-select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Error wrapper for spacing (optional) */
+.error-wrapper {
+  width: 100%;
+}
+
+/* Error text hidden by default */
+.shipping-error {
+  display: none;
+  color: red;
+  font-size: 13px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Show error when class is added */
+.shipping-error.visible {
+  display: block;
+}
+
+/* Divider between cards (optional) */
 .divider {
   width: 1px;
   background-color: #ccc;
-  height: 85%;
-  align-self: center;
+  height: auto;
+  align-self: stretch;
+}
+
+/* Responsive behavior for mobile */
+@media (max-width: 700px) {
+  .buy-row-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .divider {
+    display: none;
+  }
 }
 
 
