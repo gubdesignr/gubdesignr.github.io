@@ -993,7 +993,7 @@ ul.social-buttons li a:active {
 .divider {
   width: 1px;
   background-color: #ccc;
-  margin: 0 40px;
+  margin: 0 60px;
   flex-shrink: 0;
 }
 
