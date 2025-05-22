@@ -1084,56 +1084,44 @@ ul.social-buttons li a:active {
 }
 
 /*mobile layout testing for buy btns*/
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .buy-row-wrapper {
     flex-direction: column;
-    gap: 32px;
-    margin-top: 30px;
-    align-items: center;
+    align-items: center; /* center items vertically */
+    gap: 30px; /* space between buy options */
+  }
+
+  .divider {
+    display: none; /* remove vertical divider for stacked layout */
   }
 
   .buy-option {
-    width: 90vw;
-    max-width: 320px;
-    min-height: auto;
+    width: 90%; /* responsive width */
+    max-width: 300px;
+    height: auto; /* let content define height */
   }
 
-  .title,
-  .price {
-    width: 100%;
-    font-size: 14px;
-    line-height: 1.2;
+  .shipping-select-wrapper,
+  .shipping-select {
+    width: 100%; /* match parent */
   }
 
   .btn-buy {
     width: 100%;
-    max-width: 180px;
-    font-size: 14px;
-    padding: 10px 0;
+    font-size: 15px;
+    padding: 10px;
   }
-
-  .shipping-select-wrapper {
-    width: 100%;
-    max-width: 250px;
-  }
-
-  .shipping-select {
-    width: 100%;
-    font-size: 14px;
-  }
-
+}
 
 
 ::-moz-selection {
     text-shadow: none;
     background: #EADCC5;
-    color: #EADCC5;
 }
 
 ::selection {
     text-shadow: none;
     background: #EADCC5;
-    color: #EADCC5;
 }
 
 img::selection {
