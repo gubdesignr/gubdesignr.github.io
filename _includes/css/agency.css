@@ -1101,9 +1101,22 @@ ul.social-buttons li a:active {
     height: auto; /* let content define height */
   }
 
-  .shipping-select-wrapper,
+ .shipping-select-wrapper,
   .shipping-select {
-    width: 100%; /* match parent */
+    width: 100%;
+    max-width: 260px; /* or smaller if needed */
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .shipping-select {
+    margin-top: 10px;
+    margin-bottom: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    box-sizing: border-box;
   }
 
   .btn-buy {
