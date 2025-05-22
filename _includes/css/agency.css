@@ -1013,7 +1013,7 @@ ul.social-buttons li a:active {
   left: 50%; /*horizontal centering*/
   width: 1px;
   background-color: #ccc;
-  transform: translate(-50%, -50%); /*when changing heights to align use translateY(-50%);*/
+  transform: translateX(-50%); /*when changing heights to align use translateY(-50%);*/
 }
 .btn-divider-centered { /*default close button centering*/
   display: block;
