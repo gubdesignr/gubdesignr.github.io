@@ -977,9 +977,10 @@ ul.social-buttons li a:active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 250px;
-   min-height: 260px; 
-  height: 100%; 
+  width: 280px; /*cards were 250*/
+  height: 220px; 
+  /* min-height: 260px; 
+  height: 100%; */
   box-sizing: border-box;
   margin: 0 10px;
 }
