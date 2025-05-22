@@ -969,8 +969,7 @@ ul.social-buttons li a:active {
   margin-top: 40px;
 }
 
-.buy-option,
-.buy-card-wrapper {
+.buy-option {
   background-color: #f9f9f9;
   border-radius: 12px;
   padding: 20px;
