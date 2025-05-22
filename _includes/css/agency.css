@@ -1083,46 +1083,76 @@ ul.social-buttons li a:active {
   word-break: break-word;
 }
 
-/*mobile layout testing for buy btns*/
+/* Mobile layout: stacked cards for buy options */
 @media (max-width: 600px) {
   .buy-row-wrapper {
     flex-direction: column;
-    align-items: center; /* center items vertically */
-    gap: 30px; /* space between buy options */
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
   }
 
   .divider {
-    display: none; /* remove vertical divider for stacked layout */
+    display: none;
   }
 
   .buy-option {
-    width: 90%; /* responsive width */
-    max-width: 300px;
-    height: auto; /* let content define height */
+    width: 90%;
+    max-width: 320px;
+    background-color: #f9f9f9; /* light cream or soft gray for card */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
- .shipping-select-wrapper,
+  .title, .price {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 5px 0;
+  }
+
+  .shipping-select-wrapper,
   .shipping-select {
     width: 100%;
-    max-width: 260px; /* or smaller if needed */
+    max-width: 260px;
     font-size: 14px;
     padding: 8px;
-  }
-
-  .shipping-select {
-    margin-top: 10px;
-    margin-bottom: 12px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
+    margin: 10px 0;
     box-sizing: border-box;
   }
 
   .btn-buy {
     width: 100%;
-    font-size: 15px;
-    padding: 10px;
+    font-size: 16px;
+    padding: 12px;
+    background-color: #1E2A38;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .error-wrapper {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    height: 24px;
+    text-align: center;
+  }
+
+  .shipping-error {
+    font-size: 0.9rem;
+    color: red;
+    visibility: hidden;
+  }
+
+  .shipping-error.visible {
+    visibility: visible;
   }
 }
 
