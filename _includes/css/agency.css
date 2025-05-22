@@ -1119,8 +1119,8 @@ option {
     width: 100%;
     text-align: center;
     font-size: 16px;
-    line-height: 1.4;
-    margin: 5px 0;
+    /*line-height: 1.4;
+    margin: 5px 0;*/
   }
 
   .shipping-select-wrapper,
