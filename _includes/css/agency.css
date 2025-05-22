@@ -955,23 +955,43 @@ ul.social-buttons li a:active {
     color: #1E2A38;  /* Change this to your preferred text color (e.g., dark grey or black) */
 }
 
-/* Buy now modal layout: desktop cards with centered divider and equal spacing */
+/* Modal buy now alignment - Desktop and Mobile unified */
 .buy-row-wrapper {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: stretch;
+  column-gap: 80px; /* 40px space on each side of divider */
   justify-content: center;
-  column-gap: 100px; /* 50px gap each side of divider */
-  position: relative;
   margin-top: 40px;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Divider remains centered and consistent */
+.divider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 85%;
+  width: 1px;
+  background-color: #ccc;
 }
 
 .buy-option {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start; /* keeps top-aligned content */
   align-items: center;
   width: 250px;
-  margin: 0 10px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  overflow: visible;
   min-height: 260px;
   height: 100%;
 }
@@ -980,19 +1000,68 @@ ul.social-buttons li a:active {
   margin: 0;
   padding: 0;
   text-align: center;
-  width: 150px;
   font-weight: bold;
   font-size: 16px;
+  width: 100%;
   line-height: 1.4;
 }
 
 .price {
   font-weight: normal;
   font-size: 15px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.shipping-select-wrapper {
+  width: 100%;
+  max-width: 260px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.shipping-select {
+  width: 100%;
+  font-size: 14px;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  appearance: none;
+}
+
+option {
+  white-space: normal;
+  word-break: break-word;
+}
+
+.error-wrapper {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.shipping-error {
+  color: red;
+  font-size: 0.95rem;
+  visibility: hidden;
+  min-height: 2.5em;
+  text-align: center;
+  margin: 0;
+}
+
+.shipping-error.visible {
+  visibility: visible;
 }
 
 .btn-buy {
-  width: 100px;
+  width: 100%;
+  max-width: 200px;
   background-color: #1E2A38;
   color: white;
   border: none;
@@ -1000,9 +1069,12 @@ ul.social-buttons li a:active {
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  border-radius: 4px;
-  margin-top: 5px;
+  border-radius: 6px;
   text-align: center;
+  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+   margin-top: auto; /* Pushes the button to the bottom of the card */
 }
 
 .btn-buy:hover,
@@ -1014,68 +1086,11 @@ ul.social-buttons li a:active {
   color: #1E2A38;
 }
 
-/* Divider stays dead center of page */
-.divider {
-  width: 1px;
-  background-color: #ccc;
-  height: 85%;
-  justify-self: center;
-  align-self: center;
-}
-
-/* Modal close button position fix */
 .btn-divider-centered {
   display: block;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-}
-
-/* Prevent jumpiness from error visibility */
-.error-wrapper {
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 8px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.shipping-error {
-  color: red;
-  font-size: 0.95rem;
-  visibility: hidden;
-  min-height: 2.5em;
-  margin: 0;
-  text-align: center;
-}
-
-.shipping-error.visible {
-  visibility: visible;
-}
-
-.shipping-select-wrapper {
-  width: 250px;
-  overflow: hidden;
-  position: relative;
-  margin-top: 10px;
-}
-
-.shipping-select {
-  margin-bottom: 4px;
-  width: 100%;
-  font-size: 14px;
-  padding: 4px 6px;
-  box-sizing: border-box;
-  border-radius: 0;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-}
-
-option {
-  white-space: normal;
-  word-break: break-word;
 }
 
 /* Mobile layout: stacked cards */
@@ -1099,16 +1114,13 @@ option {
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   .title, .price {
-    width: 100%;
-    text-align: center;
     font-size: 16px;
     line-height: 1.4;
+    width: 100%;
+    text-align: center;
     margin: 5px 0;
   }
 
@@ -1126,18 +1138,13 @@ option {
     width: 100%;
     font-size: 16px;
     padding: 12px;
-    background-color: #1E2A38;
-    color: white;
     border-radius: 6px;
-    font-weight: bold;
-    margin-top: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
   .error-wrapper {
+    height: 24px;
     margin-top: 5px;
     margin-bottom: 10px;
-    height: 24px;
     text-align: center;
   }
 
@@ -1152,6 +1159,7 @@ option {
     visibility: visible;
   }
 }
+
 
 
 ::-moz-selection {
