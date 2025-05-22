@@ -980,7 +980,7 @@ ul.social-buttons li a:active {
   grid-template-rows: auto auto auto auto auto;
   justify-items: center; /* Centers child elements horizontally */
   align-content: center; /* Vertically centers the whole grid within this card */
-  
+
   flex-direction: column;
   align-items: center;
   width: 280px; /*cards were 250*/
@@ -1052,7 +1052,7 @@ ul.social-buttons li a:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 8px;
+  margin-top: 10px;
   /*margin-bottom: 10px; remove testing bottom of card*/
   text-align: center;
 }
@@ -1062,7 +1062,7 @@ ul.social-buttons li a:active {
   font-size: 0.95rem;
   visibility: hidden;
   min-height: 2.5em;
-  margin-top: 10px;/*error msg space*/
+  /*margin-top: 10px;error msg space*/
   text-align: center;
 }
 
