@@ -981,8 +981,9 @@ ul.social-buttons li a:active {
   justify-items: center; /* Centers child elements horizontally */
   align-content: center; /* Vertically centers the whole grid within this card */
 
-  flex-direction: column;
-  align-items: center;
+  /*flex-direction: column;
+  align-items: center;*/
+
   width: 280px; /*cards were 250*/
   height: 240px; /*280px works when padding is 20 but bottom is a ltitle long*/
   /* min-height: 260px; 
