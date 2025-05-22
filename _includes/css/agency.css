@@ -1008,13 +1008,12 @@ ul.social-buttons li a:active {
 
 .divider {
   position: absolute;
-  top: 50%; /* when50% - smaller line so now pos vertically half way down container*/
-  bottom: 0;
- /* height: 90%; if u wanna alter height*/
-  left: 50%;
+  top: 50%; /* vertical centering*/
+  height: 90%; 
+  left: 50%; /*horizontal centering*/
   width: 1px;
   background-color: #ccc;
-  transform: translateX(-50%); /*when changing heights to align use translateY(-50%);*/
+  transform: translate(-50%, -50%); /*when changing heights to align use translateY(-50%);*/
 }
 .btn-divider-centered { /*default close button centering*/
   display: block;
