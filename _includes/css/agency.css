@@ -958,18 +958,19 @@ ul.social-buttons li a:active {
 
 
 
-
+/*modal cards and alignment*/
 .buy-row-wrapper {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: stretch;
+  justify-content: center;
+  column-gap: 100px; /* 50px gap each side of divider */
   position: relative;
   margin-top: 40px;
-  gap: 100px; /* 50px space on each side of the divider */
 }
 
-.buy-card-wrapper,
-.buy-option {
+.buy-option,
+.buy-card-wrapper {
   background-color: #f9f9f9;
   border-radius: 12px;
   padding: 20px;
@@ -979,9 +980,9 @@ ul.social-buttons li a:active {
   align-items: center;
   width: 250px;
   min-height: 260px;
+  height: 100%;
   box-sizing: border-box;
   margin: 0 10px;
-  height: 100%;
 }
 
 .title, .price {
@@ -1022,14 +1023,16 @@ ul.social-buttons li a:active {
   color: #1E2A38;
 }
 
+/* Divider stays dead center of page */
 .divider {
   width: 1px;
   background-color: #ccc;
   height: 85%;
-  align-self: center;
   justify-self: center;
+  align-self: center;
 }
 
+/* Modal close button position fix */
 .btn-divider-centered {
   display: block;
   position: absolute;
@@ -1037,6 +1040,7 @@ ul.social-buttons li a:active {
   transform: translateX(-50%);
 }
 
+/* Prevent jumpiness from error visibility */
 .error-wrapper {
   height: 28px;
   display: flex;
@@ -1083,8 +1087,10 @@ option {
   word-break: break-word;
 }
 
+/* Mobile layout: stacked cards */
 @media (max-width: 600px) {
   .buy-row-wrapper {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
@@ -1095,14 +1101,17 @@ option {
     display: none;
   }
 
-  .buy-card-wrapper,
-  .buy-option {
+  .buy-option,
+  .buy-card-wrapper {
     width: 90%;
     max-width: 320px;
-    padding: 20px;
-    border-radius: 12px;
     background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .title, .price {
