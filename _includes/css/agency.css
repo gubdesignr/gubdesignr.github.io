@@ -1124,8 +1124,6 @@ ul.social-buttons li a:active {
     padding: 8px;
     margin: 10px 0;
     box-sizing: border-box;
-
-    visibility: visible;
   }
 
   .btn-buy {
@@ -1151,6 +1149,7 @@ ul.social-buttons li a:active {
     font-size: 0.9rem;
     color: red;
     visibility: hidden;
+    height: 24px; /* reserve space to avoid shifting layout */
   }
 
   .shipping-error.visible {
