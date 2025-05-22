@@ -1061,7 +1061,6 @@ ul.social-buttons li a:active {
 
 .shipping-select-wrapper {
   width: 250px; /*  Fixed width */
-  height: 28px; /*alignement test to maintain even with long words*/
   overflow: hidden;
   position: relative;
 }
