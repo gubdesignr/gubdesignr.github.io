@@ -958,7 +958,7 @@ ul.social-buttons li a:active {
 /*modal buy now alignments*/ 
 .buy-row-wrapper {
   display: grid;
-  grid-template-columns: 1fr auto 1fr; /* two cards and a divider */
+  grid-template-columns: 1fr auto 1fr; /* Two cards and a divider */
   justify-content: center;
   align-items: stretch;
   gap: 7vw;
@@ -980,7 +980,7 @@ ul.social-buttons li a:active {
   background-color: #f9f9f9;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 .btn-buy {
@@ -997,7 +997,8 @@ ul.social-buttons li a:active {
   text-align: center;
 }
 
-.title, .price {
+.title,
+.price {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -1039,10 +1040,11 @@ ul.social-buttons li a:active {
 }
 
 .error-wrapper {
-  height: 28px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
@@ -1063,16 +1065,29 @@ ul.social-buttons li a:active {
   width: 250px;
   overflow: hidden;
   position: relative;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  margin-top: 10px;
 }
 
 .shipping-select {
-  margin-top: 10px;
-  margin-bottom: 12px;
   width: 100%;
+  font-size: 14px;
+  padding: 10px 12px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  appearance: none;
+  cursor: pointer;
+  box-sizing: border-box;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: inline-block;
+}
+
+.shipping-select:focus {
+  outline: none;
+  border-color: #888;
 }
 
 option {
@@ -1099,7 +1114,8 @@ option {
     max-width: 320px;
   }
 
-  .title, .price {
+  .title,
+  .price {
     width: 100%;
     text-align: center;
     font-size: 16px;
@@ -1107,14 +1123,20 @@ option {
     margin: 5px 0;
   }
 
-  .shipping-select-wrapper,
-  .shipping-select {
+  .shipping-select-wrapper {
     width: 100%;
     max-width: 260px;
     font-size: 14px;
-    padding: 8px;
-    margin: 10px 0;
-    box-sizing: border-box;
+    margin-top: 12px;
+  }
+
+  .shipping-select {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
   }
 
   .btn-buy {
@@ -1124,13 +1146,13 @@ option {
     border-radius: 6px;
     font-weight: bold;
     margin-top: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
   .error-wrapper {
-    margin-top: 5px;
+    margin-top: 18px;
     margin-bottom: 10px;
-    height: 24px;
+    height: auto;
     text-align: center;
   }
 
