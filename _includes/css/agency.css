@@ -972,26 +972,19 @@ ul.social-buttons li a:active {
 .buy-option {
   background-color: #f9f9f9;
   border-radius: 12px;
-  padding-top: 20px; /*padding: 20px before*/
-  padding-bottom: 0px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); 
-  display: grid;
+  padding-top: 20px;
+  padding-bottom: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   
-  grid-template-rows: auto auto auto auto auto; /*this was all auto*/
-  gap: 8px; /*use this to space items*/
-  justify-items: center; /* Centers child elements horizontally */
-  align-content: start; /* Vertically centers the whole grid within this card was center b4 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
 
-  /*flex-direction: column;
-  align-items: center;*/
-
-  width: 280px; /*cards were 250*/
-  height: 240px; /*280px works when padding is 20 but bottom is a ltitle long*/
-  /* min-height: 260px; 
-  height: 100%; */
+  width: 280px;
+  height: 240px;
   box-sizing: border-box;
-
-   /* margin: 0 10px; */ /* removed for grid row alignment */
 }
 
 
