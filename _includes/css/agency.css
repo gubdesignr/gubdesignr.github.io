@@ -962,7 +962,7 @@ ul.social-buttons li a:active {
 .buy-row-wrapper {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 80px; /* 40px each side of the divider */
   margin-top: 40px;
   position: relative;
@@ -992,6 +992,7 @@ ul.social-buttons li a:active {
   justify-content: flex-start;
   gap: 12px; /* consistent spacing between ALL elements */
 }
+
 
 /* Title & Price Text */
 .title,
