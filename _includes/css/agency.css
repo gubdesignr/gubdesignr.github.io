@@ -1008,7 +1008,7 @@ ul.social-buttons li a:active {
 
 .divider {
   position: absolute;
-  top: 50%; /* vertical centering*/
+  top: 0; /* vertical centering*/
   height: 100%; 
   left: 50%; /*horizontal centering*/
   width: 1px;
