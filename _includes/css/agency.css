@@ -1037,11 +1037,11 @@ ul.social-buttons li a:active {
 
 
 .error-wrapper { /*stops erros being jumpy and affecting each other*/
-  height: 20px; /* or slightly more than your error message's line-height */
+  height: 24px; /* or slightly more than your error message's line-height */
   display: flex;
   align-items: center;
   justify-content: center;
- /* margin-bottom: 10px;  pushes it away from the Buy button this is the bottom thing so wtf*/
+  margin-bottom: 10px;  /*pushes it away from the Buy button this is the bottom thing so wtf*/
 
 }
 .shipping-error { /*replaces inline style*/
