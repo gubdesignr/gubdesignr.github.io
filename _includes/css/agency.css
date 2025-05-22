@@ -958,45 +958,50 @@ ul.social-buttons li a:active {
 
 
 
-/*modal cards and alignment*/
+/* Modal wrapper and card alignment */
 .buy-row-wrapper {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: stretch;
+  display: flex;
   justify-content: center;
-  column-gap: 80px; /* 40px gap each side of divider */
-  position: relative;
+  align-items: flex-start;
+  gap: 80px; /* 40px each side of the divider */
   margin-top: 40px;
+  position: relative;
 }
 
+/* Divider stays dead center of page */
+.divider {
+  width: 1px;
+  background-color: #ccc;
+  height: 85%;
+  align-self: stretch;
+}
+
+/* Card styling */
 .buy-option {
   background-color: #f9f9f9;
   border-radius: 12px;
-  padding-top: 20px;
-  padding-bottom: 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  
+  padding: 20px 0 0 0; /* top only */
+  width: 280px;
+  min-height: 240px;
+  box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 16px;
-
-  width: 280px;
-  height: 240px;
-  box-sizing: border-box;
+  gap: 12px; /* consistent spacing between ALL elements */
 }
 
-
-.title, .price {
+/* Title & Price Text */
+.title,
+.price {
   margin: 0;
   padding: 0;
   text-align: center;
-  width: 150px;
-  font-weight: bold;
   font-size: 16px;
-  
-   line-height: 1.2; /*1.4*/
+  line-height: 1.4;
+  width: 150px;
   white-space: nowrap;
 }
 
@@ -1005,6 +1010,7 @@ ul.social-buttons li a:active {
   font-size: 15px;
 }
 
+/* Buy Button */
 .btn-buy {
   width: 100px;
   background-color: #1E2A38;
@@ -1015,7 +1021,6 @@ ul.social-buttons li a:active {
   font-size: 16px;
   font-weight: bold;
   border-radius: 4px;
-  /*margin-top: 5px;*/
   text-align: center;
 }
 
@@ -1028,31 +1033,30 @@ ul.social-buttons li a:active {
   color: #1E2A38;
 }
 
-/* Divider stays dead center of page */
-.divider {
-  width: 1px;
-  background-color: #ccc;
-  height: 85%;
-  justify-self: center;
-  align-self: center;
+/* Shipping dropdown wrapper */
+.shipping-select-wrapper {
+  width: 250px;
+  overflow: hidden;
+  position: relative;
 }
 
-/* Modal close button position fix */
-.btn-divider-centered {
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+/* Dropdown styling */
+.shipping-select {
+  width: 100%;
+  font-size: 14px;
+  padding: 1px 2px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 0;
 }
 
-/* Prevent jumpiness from error visibility */
+/* Error display */
 .error-wrapper {
   height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
- /* margin-top: 10px; */ /* removed for grid row alignment */
-  /* margin-bottom: 10px; */ /* removed for grid row alignment */
   text-align: center;
 }
 
@@ -1061,7 +1065,6 @@ ul.social-buttons li a:active {
   font-size: 0.95rem;
   visibility: hidden;
   min-height: 2.5em;
-   /* margin-top: 10px; */ /* removed for grid row alignment */
   text-align: center;
 }
 
@@ -1069,27 +1072,12 @@ ul.social-buttons li a:active {
   visibility: visible;
 }
 
-.shipping-select-wrapper {
-  width: 250px;
-  overflow: hidden;
-  position: relative;
-   /* margin-top: 10px; */ /* removed for grid row alignment */
-}
-
-.shipping-select {
-    /* margin-bottom: 4px; */ /* removed for grid row alignment */
-  width: 100%;
-  font-size: 14px; 
-  padding: 1px 2px; /*2/4 change*/
-  box-sizing: border-box;
-  border-radius: 0;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-}
-
-option {
-  white-space: normal;
-  word-break: break-word;
+/* Modal close button position fix */
+.btn-divider-centered {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Mobile layout: stacked cards */
