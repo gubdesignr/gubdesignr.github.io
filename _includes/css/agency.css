@@ -974,6 +974,7 @@ ul.social-buttons li a:active {
   margin: 0 10px;           /* spacing around each button */
 
   min-height: 240px; /*testing for misalignment*/
+  height: 240px; /*misalignment fix */
 }
 
 .btn-buy {
@@ -1074,6 +1075,8 @@ ul.social-buttons li a:active {
   text-overflow: ellipsis; /* replaces with ... if too long */
 
   display: inline-block;
+  height: 36px; /*fixed to fix alignment issues depending on country length*/
+  font-size: 15px; /*fixed to fix alignment issues depending on country length*/
 }
 
 
