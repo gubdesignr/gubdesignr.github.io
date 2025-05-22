@@ -978,7 +978,7 @@ ul.social-buttons li a:active {
   display: grid;
   
   grid-template-rows: 45px 30px 48px 35px 28px; /*this was all auto*/
-  row-gap: 8px; /*spacing alingment test*/
+  row-gap: 8px; /*use this to space items*/
   justify-items: center; /* Centers child elements horizontally */
   align-content: start; /* Vertically centers the whole grid within this card was center b4 */
 
@@ -993,6 +993,12 @@ ul.social-buttons li a:active {
 
    /* margin: 0 10px; */ /* removed for grid row alignment */
 }
+
+.title { grid-row: 1; }
+.price { grid-row: 2; }
+form   { grid-row: 3; }
+.shipping-select-wrapper { grid-row: 4; }
+.error-wrapper { grid-row: 5; }
 
 .title, .price {
   margin: 0;
