@@ -153,71 +153,58 @@
   </div></div>
 
 </div>
+
+
 <script>
-// RUNS ONCE ON LOAD → Adds suffix & trims label text if needed
-document.querySelectorAll('.shipping-select').forEach(select => {
-  const maxTotalLength = 40; // total allowed length inc. price suffix
-
-  Array.from(select.options).forEach(option => {
-    const label = option.getAttribute('data-label'); // original label text
-    const priceRaw = option.getAttribute('data-price'); // price from data attr
-
-    if (!label || !priceRaw) return; // skip if either is missing
-
-    const price = parseFloat(priceRaw).toFixed(2); // format price to 2dp
-    const suffix = ` - £${price}`; // what always needs to be visible
-    const availableLength = maxTotalLength - suffix.length; // space left for label
-
-    let trimmedLabel = label;
-    if (label.length > availableLength) {
-      trimmedLabel = label.slice(0, availableLength - 1) + '…'; // cut label if too long
-    }
-
-    option.textContent = trimmedLabel + suffix; // final label shown
-  });
-});
-
-
-// ON SELECTION → Fixes label if it’s messed up (e.g. user reselects)
+// UPDATE ONLY SELECTED OPTION TEXT ON SELECTION (truncate + add suffix)
 document.querySelectorAll('.shipping-select').forEach(select => {
   select.addEventListener('change', function () {
     const selected = this.options[this.selectedIndex];
-    const country = selected.getAttribute('data-label'); // get full untrimmed label
-    const price = selected.dataset.price;
-    
-    if (country && price) {
-      selected.textContent = `${country} – ${price}`; // replace label with correct format
+    const label = selected.getAttribute('data-label');
+    const price = selected.getAttribute('data-price');
+
+    if (!label || !price) return;
+
+    const suffix = ` - £${parseFloat(price).toFixed(2)}`;
+    const maxLength = 40;
+    const availableLength = maxLength - suffix.length;
+
+    let displayLabel = label;
+    if (label.length > availableLength) {
+      displayLabel = label.slice(0, availableLength - 1) + '…';
     }
+
+    // Only change the text of the selected option
+    selected.textContent = displayLabel + suffix;
   });
 });
 
 
-//  HIDES ERROR MSG IF COUNTRY SELECTED
+// HIDE ERROR ON VALID SELECTION
 document.querySelectorAll('.shipping-select').forEach(select => {
   const error = select.closest('.buy-option')?.querySelector('.shipping-error');
 
-  select.addEventListener('change', function () {
-    if (select.value && error) {
-      error.classList.remove('visible'); // hide red error msg
-    }
+  select.addEventListener('change', () => {
+    if (select.value && error) error.classList.remove('visible');
   });
 });
 
 
-// PREVENTS BUY NOW IF COUNTRY NOT SELECTED → show inline error instead of popup
+// BLOCK BUY IF NO COUNTRY PICKED
 document.querySelectorAll('.shipping-select').forEach(select => {
   const form = select.closest('.buy-option')?.querySelector('form');
   const error = select.closest('.buy-option')?.querySelector('.shipping-error');
 
-  form?.addEventListener('submit', function (e) {
+  form?.addEventListener('submit', e => {
     if (!select.value) {
-      e.preventDefault(); // stops form submit
-      if (error) error.classList.add('visible'); // show red error msg
-      select.focus(); // put cursor on the box
+      e.preventDefault();
+      if (error) error.classList.add('visible');
+      select.focus();
     }
   });
 });
 </script>
+
 
 
 <!-- Line break for spacing between buttons -->
