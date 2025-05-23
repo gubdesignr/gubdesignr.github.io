@@ -996,10 +996,6 @@ ul.social-buttons li a:active {
   margin: 0 60px;
   flex-shrink: 0;
 
-  
-  height: 90%;
-  align-self: center;    /* Center the divider vertically */
-
 }
 
 /* Typography */
