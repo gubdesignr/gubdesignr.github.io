@@ -995,7 +995,7 @@ ul.social-buttons li a:active {
   background-color: #ccc;
   margin: 0 60px;
   flex-shrink: 0;
-  height 90%;
+  height: 90%;
 
 }
 
@@ -1060,14 +1060,11 @@ ul.social-buttons li a:active {
   color: red;
   font-size: 0.9rem;
   display: none;
-    visibility: hidden;             /* CHANGED: instead of display: none */
   margin-top: 5px;
-  height: 1.2em;                  /* ADDED: reserve vertical space */
 }
 
 .shipping-error.visible {
   display: block;
-  visibility: visible;
 }
 
 /* Responsive design */
