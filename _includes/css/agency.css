@@ -1043,7 +1043,7 @@ ul.social-buttons li a:active {
 /* Dropdown */
 .shipping-select-wrapper {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .shipping-select {
@@ -1067,7 +1067,6 @@ ul.social-buttons li a:active {
   color: red;
   font-size: 10px;
   display: none;
-  margin-top: 5px;
 }
 
 .shipping-error.visible {
