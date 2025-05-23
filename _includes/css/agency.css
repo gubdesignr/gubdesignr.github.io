@@ -987,7 +987,7 @@ ul.social-buttons li a:active {
   align-items: center;
   width: 100%;
   max-width: 400px;
-  height: 250px;
+  height: 240px;
 }
 
 /* Divider with 40px spacing on each side */
@@ -997,7 +997,7 @@ ul.social-buttons li a:active {
   margin: 0 80px;
   flex-shrink: 0;
 
-  height: 230px;
+  height: 220px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
