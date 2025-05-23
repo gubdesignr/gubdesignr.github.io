@@ -1073,6 +1073,14 @@ ul.social-buttons li a:active {
   display: block;
 }
 
+.divider-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;     /* Aligns vertically to the container */
+  height: 100%;            /* Take full height to align with divider */
+  margin-top: -50%;        /* Adjust this to match the divider's center */
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .buy-row-wrapper {
