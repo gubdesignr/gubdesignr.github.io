@@ -972,6 +972,7 @@ ul.social-buttons li a:active {
 /* Grey cards */
 .buy-card {
   background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
   flex: 1;
   padding: 20px;
   border-radius: 8px;
@@ -1050,7 +1051,6 @@ ul.social-buttons li a:active {
   font-size: 12px;
   border: 1px solid #ccc;
   background-color: #f9f9f9;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
   border-radius: 4px;
   box-sizing: border-box;
 }
