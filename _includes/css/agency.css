@@ -978,6 +978,9 @@ ul.social-buttons li a:active {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+
+  height: 240px;
+  width: 400px;
 }
 
 /* Content inside card */
@@ -987,7 +990,7 @@ ul.social-buttons li a:active {
   align-items: center;
   width: 100%;
   max-width: 400px;
-  height: 240px;
+  
 }
 
 /* Divider with 40px spacing on each side */
