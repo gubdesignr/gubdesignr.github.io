@@ -1050,6 +1050,7 @@ ul.social-buttons li a:active {
 /* Dropdown */
 .shipping-select-wrapper {
   width: 100%;
+  max-width: 260px; /* Fixed or max width truncation test*/
   margin-bottom: 2px;
 }
 
@@ -1061,6 +1062,12 @@ ul.social-buttons li a:active {
   background-color: #f9f9f9;
   border-radius: 4px;
   box-sizing: border-box;
+
+  /*button suffixing truncation*/
+   white-space: nowrap;         /* Prevent wrapping */
+  overflow: hidden;            /* Hide overflowed text */
+  text-overflow: ellipsis;     /* Add ... to overflowed text */
+  appearance: none;            /* Removes native styling in some browsers */
 }
 
 /* Error handling */

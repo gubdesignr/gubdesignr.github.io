@@ -178,6 +178,17 @@
       }
     });
   });
+
+
+
+  const select = document.querySelector('.shipping-select'); //suffixing script and truncations
+
+select.addEventListener('change', function () {
+  const selected = select.options[select.selectedIndex];
+  const price = selected.getAttribute('data-price');
+  const baseText = selected.textContent.split(' - ')[0]; // remove suffix if already present
+  selected.textContent = `${baseText} - ${price}`;
+});
 </script>
 
 
