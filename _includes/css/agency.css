@@ -1043,12 +1043,12 @@ ul.social-buttons li a:active {
 /* Dropdown */
 .shipping-select-wrapper {
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .shipping-select {
   width: 100%;
-  padding: 8px;
+  padding: 4px 8px; /* 4px top/bottom, 8px left/right */
   font-size: 12px;
   border: 1px solid #ccc;
   background-color: #f9f9f9;
