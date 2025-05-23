@@ -55,37 +55,41 @@
     </form>
     <!-- Dropdown below DIY button -->
      <div class="shipping-select-wrapper"><!--test for width hardcoded-->
-    <select class="shipping-select" required>
-      <option value="" disabled selected>Select country for shipping</option>
-      <option data-price="£20">🇬🇧 United Kingdom & Northern Ireland</option>
+    <select class="shipping-select" required id="shipping-select">
+  <option value="" disabled selected>Select country for shipping</option>
 
-      <optgroup label="🌏 Asia-Pacific - £65">
-        <option data-price="£65">🇸🇬 Singapore</option>
-        <option data-price="£65">🇭🇰 Hong Kong</option>
-        <option data-price="£65">🇹🇭 Thailand</option>
-        <option data-price="£65">🇦🇺 Australia</option>
-        <option data-price="£65">🇳🇿 New Zealand</option>
-      </optgroup>
+  <optgroup label="British Isles - £20">
+    <option data-price="20.00" data-label="🇬🇧 United Kingdom & Northern Ireland">🇬🇧 United Kingdom & Northern Ireland</option>
+  </optgroup>
 
-      <optgroup label="🇪🇺 Europe - £52.10">
-        <option data-price="£52.10">🇩🇪 Germany</option>
-        <option data-price="£52.10">🇫🇷 France</option>
-        <option data-price="£52.10">🇪🇸 Spain (Mainland Only)</option>
-        <option data-price="£52.10">🇮🇹 Italy</option>
-      </optgroup>
+  <optgroup label="🌏 Asia-Pacific - £65">
+    <option data-price="65.00" data-label="🇸🇬 Singapore">🇸🇬 Singapore</option>
+    <option data-price="65.00" data-label="🇭🇰 Hong Kong">🇭🇰 Hong Kong</option>
+    <option data-price="65.00" data-label="🇹🇭 Thailand">🇹🇭 Thailand</option>
+    <option data-price="65.00" data-label="🇦🇺 Australia">🇦🇺 Australia</option>
+    <option data-price="65.00" data-label="🇳🇿 New Zealand">🇳🇿 New Zealand</option>
+  </optgroup>
 
-      <optgroup label="🇪🇺 Scandinavia - £62">
-        <option data-price="£62">🇩🇰 Norway</option>
-        <option data-price="£62">🇳🇴 Denmark</option>
-        <option data-price="£62">🇸🇪 Sweden</option>
-        <option data-price="£62">🇫🇮 Finland</option>
-      </optgroup>
+  <optgroup label="🇪🇺 Europe - £52.10">
+    <option data-price="52.10" data-label="🇩🇪 Germany">🇩🇪 Germany</option>
+    <option data-price="52.10" data-label="🇫🇷 France">🇫🇷 France</option>
+    <option data-price="52.10" data-label="🇪🇸 Spain (Mainland Only)">🇪🇸 Spain (Mainland Only)</option>
+    <option data-price="52.10" data-label="🇮🇹 Italy">🇮🇹 Italy</option>
+  </optgroup>
 
-      <optgroup label="🌎 North America - £80">
-        <option data-price="£80">🇨🇦 Canada</option>
-        <option data-price="£80">🇺🇸 USA</option>
-      </optgroup>
-    </select></div> 
+  <optgroup label="🇪🇺 Scandinavia - £62">
+    <option data-price="62.00" data-label="🇩🇰 Norway">🇩🇰 Norway</option>
+    <option data-price="62.00" data-label="🇳🇴 Denmark">🇳🇴 Denmark</option>
+    <option data-price="62.00" data-label="🇸🇪 Sweden">🇸🇪 Sweden</option>
+    <option data-price="62.00" data-label="🇫🇮 Finland">🇫🇮 Finland</option>
+  </optgroup>
+
+  <optgroup label="🌎 North America - £80">
+    <option data-price="80.00" data-label="🇨🇦 Canada">🇨🇦 Canada</option>
+    <option data-price="80.00" data-label="🇺🇸 USA">🇺🇸 USA</option>
+  </optgroup>
+</select>
+</div> 
 
      <!-- Inline error message for shipping -->
       <div class="error-wrapper">
@@ -105,37 +109,41 @@
     </form>
     <!-- Dropdown below Built button -->
      <div class="shipping-select-wrapper">
-    <select class="shipping-select" required>
-      <option value="" disabled selected>Select country for shipping</option>
-      <option data-price="£20">🇬🇧 United Kingdom & Northern Ireland</option> 
+    <select class="shipping-select" required id="shipping-select">
+  <option value="" disabled selected>Select country for shipping</option>
 
-      <optgroup label="🌏 Asia-Pacific - £65">
-        <option data-price="£65">🇸🇬 Singapore</option>
-        <option data-price="£65">🇭🇰 Hong Kong</option>
-        <option data-price="£65">🇹🇭 Thailand</option>
-        <option data-price="£65">🇦🇺 Australia</option>
-        <option data-price="£65">🇳🇿 New Zealand</option>
-      </optgroup>
+  <optgroup label="British Isles - £20">
+    <option data-price="20.00" data-label="🇬🇧 United Kingdom & Northern Ireland">🇬🇧 United Kingdom & Northern Ireland</option>
+  </optgroup>
 
-      <optgroup label="🇪🇺 Europe - £52.10">
-        <option data-price="£52.10">🇩🇪 Germany</option>
-        <option data-price="£52.10">🇫🇷 France</option>
-        <option data-price="£52.10">🇪🇸 Spain (Mainland Only)</option>
-        <option data-price="£52.10">🇮🇹 Italy</option>
-      </optgroup>
+  <optgroup label="🌏 Asia-Pacific - £65">
+    <option data-price="65.00" data-label="🇸🇬 Singapore">🇸🇬 Singapore</option>
+    <option data-price="65.00" data-label="🇭🇰 Hong Kong">🇭🇰 Hong Kong</option>
+    <option data-price="65.00" data-label="🇹🇭 Thailand">🇹🇭 Thailand</option>
+    <option data-price="65.00" data-label="🇦🇺 Australia">🇦🇺 Australia</option>
+    <option data-price="65.00" data-label="🇳🇿 New Zealand">🇳🇿 New Zealand</option>
+  </optgroup>
 
-      <optgroup label="🇪🇺 Scandinavia - £62">
-        <option data-price="£62">🇩🇰 Norway</option>
-        <option data-price="£62">🇳🇴 Denmark</option>
-        <option data-price="£62">🇸🇪 Sweden</option>
-        <option data-price="£62">🇫🇮 Finland</option>
-      </optgroup>
+  <optgroup label="🇪🇺 Europe - £52.10">
+    <option data-price="52.10" data-label="🇩🇪 Germany">🇩🇪 Germany</option>
+    <option data-price="52.10" data-label="🇫🇷 France">🇫🇷 France</option>
+    <option data-price="52.10" data-label="🇪🇸 Spain (Mainland Only)">🇪🇸 Spain (Mainland Only)</option>
+    <option data-price="52.10" data-label="🇮🇹 Italy">🇮🇹 Italy</option>
+  </optgroup>
 
-      <optgroup label="🌎 North America - £80">
-        <option data-price="£80">🇨🇦 Canada</option>
-        <option data-price="£80">🇺🇸 USA</option>
-      </optgroup>
-    </select></div>
+  <optgroup label="🇪🇺 Scandinavia - £62">
+    <option data-price="62.00" data-label="🇩🇰 Norway">🇩🇰 Norway</option>
+    <option data-price="62.00" data-label="🇳🇴 Denmark">🇳🇴 Denmark</option>
+    <option data-price="62.00" data-label="🇸🇪 Sweden">🇸🇪 Sweden</option>
+    <option data-price="62.00" data-label="🇫🇮 Finland">🇫🇮 Finland</option>
+  </optgroup>
+
+  <optgroup label="🌎 North America - £80">
+    <option data-price="80.00" data-label="🇨🇦 Canada">🇨🇦 Canada</option>
+    <option data-price="80.00" data-label="🇺🇸 USA">🇺🇸 USA</option>
+  </optgroup>
+</select>
+</div>
    
     <!-- Inline error message for shipping -->
      <div class="error-wrapper">
@@ -181,14 +189,28 @@
 
 
 
-  const select = document.querySelector('.shipping-select'); //suffixing script and truncations
+ document.querySelectorAll('.shipping-select').forEach(select => { //truncation suffixing
+  const maxTotalLength = 40;
 
-select.addEventListener('change', function () {
-  const selected = select.options[select.selectedIndex];
-  const price = selected.getAttribute('data-price');
-  const baseText = selected.textContent.split(' - ')[0]; // remove suffix if already present
-  selected.textContent = `${baseText} - ${price}`;
+  Array.from(select.options).forEach(option => {
+    const label = option.getAttribute('data-label');
+    const priceRaw = option.getAttribute('data-price');
+
+    if (!label || !priceRaw) return;
+
+    const price = parseFloat(priceRaw).toFixed(2);
+    const suffix = ` - £${price}`;
+    const availableLength = maxTotalLength - suffix.length;
+
+    let trimmedLabel = label;
+    if (label.length > availableLength) {
+      trimmedLabel = label.slice(0, availableLength - 1) + '…';
+    }
+
+    option.textContent = trimmedLabel + suffix;
+  });
 });
+
 </script>
 
 
