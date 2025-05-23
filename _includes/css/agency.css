@@ -967,6 +967,8 @@ ul.social-buttons li a:active {
   max-width: 1100px;
   margin: 0 auto;
   padding: 40px 20px;
+
+  position: relative;
 }
 
 /* Grey cards */
@@ -996,6 +998,7 @@ ul.social-buttons li a:active {
   margin: 0 60px;
   flex-shrink: 0;
 
+  position: absolute;
   top: 5%;                /* 5 % inset from the top */
   bottom: 5%;             /* 5 % inset from the bottom → makes it 90 % tall */
 
