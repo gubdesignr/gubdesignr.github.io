@@ -964,7 +964,7 @@ ul.social-buttons li a:active {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
 }
@@ -979,8 +979,8 @@ ul.social-buttons li a:active {
   display: flex;
   justify-content: center;
 
-  height: 280px;
-  width: 560px;      /* Fixed width */
+  height: 320px;
+  width: 440px;      /* Fixed width */
   flex: 0 0 auto;     /* Prevent flexbox from resizing it, was 1*/
 }
 
