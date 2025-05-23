@@ -979,8 +979,8 @@ ul.social-buttons li a:active {
   display: flex;
   justify-content: center;
 
-  height: 300px;
-  width: 400px;      /* Fixed width */
+  height: 280px;
+  width: 380px;      /* Fixed width */
   flex: 0 0 auto;     /* Prevent flexbox from resizing it, was 1*/
 }
 
