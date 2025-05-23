@@ -1049,7 +1049,7 @@ ul.social-buttons li a:active {
 
 /* Dropdown */
 .shipping-select-wrapper {
-  max-width: 260px; /* Fixed or max width truncation test*/
+  width: 260px; /* Fixed or max width truncation test*/
   margin-bottom: 2px;
 }
 
