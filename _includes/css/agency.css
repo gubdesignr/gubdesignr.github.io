@@ -984,7 +984,7 @@ ul.social-buttons li a:active {
 
  height: 280px;
   width: 380px;       /*Fixed width */
-  flex: 0 0 auto;     /*Prevent flexbox from resizing it, was 1*/
+  /*flex: 0 0 auto;     Prevent flexbox from resizing it, was 1*/
 
 }
 
