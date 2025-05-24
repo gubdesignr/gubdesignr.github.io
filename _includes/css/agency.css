@@ -1036,7 +1036,7 @@ ul.social-buttons li a:active {
   flex: 0 0 auto;     /*Prevent flexbox from resizing it, was 1*/
 
 }
-@media (max-width: 768px) {
+@media (max-width: 550px) {
   
 .buy-card { /*padding to parents as yet unkown*/
  height: 280px;
