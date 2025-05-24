@@ -983,6 +983,22 @@ ul.social-buttons li a:active {
 
   border: 2px solid red;
 }
+/* Divider with 80px spacing on each side */
+.divider {
+  width: 1px;
+  background-color: #ccc;
+  margin: 10px 80px;
+  flex-shrink: 0;
+
+  height: 260px;
+}
+.btn-divider-centered { /*default close button centering*/
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /*margin-top: 30px;  Adjust as needed */
+}
 @media (max-width: 961px) {
   .buy-row-wrapper {
     flex-direction: column;
@@ -993,7 +1009,7 @@ ul.social-buttons li a:active {
   .divider {
     width: 260px;
     height: 1px;
-    margin: 40px 10px;
+    margin: 80px 10px;
   }
 }
 
@@ -1023,24 +1039,7 @@ ul.social-buttons li a:active {
   
 }
 
-/* Divider with 40px spacing on each side */
-.divider {
-  width: 1px;
-  background-color: #ccc;
-  margin: 0 80px;
-  flex-shrink: 0;
 
-  height: 260px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.btn-divider-centered { /*default close button centering*/
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  /*margin-top: 30px;  Adjust as needed */
-}
 
 /* Typography */
 .title {
