@@ -992,8 +992,8 @@ ul.social-buttons li a:active {
   
   .divider {
     width: 260px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     height: 1px;
     margin: 80px 0;
   }
