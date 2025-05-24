@@ -954,6 +954,11 @@ ul.social-buttons li a:active {
 .modal-body .form-control {
     color: #1E2A38;  /* Change this to your preferred text color (e.g., dark grey or black) */
 }
+.modal-body {
+  display: flex;
+  justify-content: center;  /* centers the wrapper horizontally */
+  border: 2px solid blue;
+}
 
 
 
