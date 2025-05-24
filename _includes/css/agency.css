@@ -1036,6 +1036,20 @@ ul.social-buttons li a:active {
   flex: 0 0 auto;     /*Prevent flexbox from resizing it, was 1*/
 
 }
+@media (max-width: 768px) {
+  
+.buy-card { /*padding to parents as yet unkown*/
+ height: 280px;
+  width: 290px;       /*Fixed width */
+  flex: 0 0 auto;     /*Prevent flexbox from resizing it, was 1*/
+}
+
+  .divider {
+    width: 270px;
+    height: 1px;
+    margin: 60px 10px;
+  }
+}
 
 /* Content inside card */
 .buy-option {
