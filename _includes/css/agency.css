@@ -979,9 +979,13 @@ ul.social-buttons li a:active {
   display: flex;
   justify-content: center;
 
-  height: 280px;
-  width: 380px;      /* Fixed width */
-  flex: 0 0 auto;     /* Prevent flexbox from resizing it, was 1*/
+ /* height: 280px;
+  width: 380px;       Fixed width 
+  flex: 0 0 auto;     Prevent flexbox from resizing it, was 1*/
+
+    flex: 1 1 300px; /* Responsive width, min 300px */
+  max-width: 500px;
+  height: 280px; /* Fixed height */
 }
 
 /* Content inside card */
@@ -1050,7 +1054,7 @@ ul.social-buttons li a:active {
 /* Dropdown */
 .shipping-select-wrapper {
   width: 260px; /* Fixed or max width truncation test*/
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 
 .shipping-select {
@@ -1078,7 +1082,7 @@ ul.social-buttons li a:active {
 
 .shipping-error {
   color: red;
-  font-size: 10px;
+  font-size: 9px;
   display: none;
 }
 
