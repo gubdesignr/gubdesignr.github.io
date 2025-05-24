@@ -1118,7 +1118,7 @@ ul.social-buttons li a:active {
 }
 
 
-/* Responsive design */
+/* Responsive design mobile 
 @media (max-width: 768px) {
   .buy-row-wrapper {
     flex-direction: column;
@@ -1130,7 +1130,7 @@ ul.social-buttons li a:active {
     height: 1px;
     margin: 40px 0;
   }
-}
+}*/
 
 
 
