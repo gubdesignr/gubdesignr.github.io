@@ -961,8 +961,6 @@ ul.social-buttons li a:active {
     display: flex;
   justify-content: center;  /* centers the wrapper horizontally */
   padding: 40px 20px;  /* Keep padding consistent around red box */
-  box-sizing: border-box; /* include padding in width calculations */
-  width: 100%;            /* let container fill available horizontal space */
   border: 2px solid blue;
 }
 
