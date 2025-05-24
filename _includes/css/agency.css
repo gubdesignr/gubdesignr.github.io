@@ -873,9 +873,6 @@ ul.social-buttons li a:active {
     -webkit-box-shadow: none;
     box-shadow: none;
 
-    display: flex;
-  justify-content: center;  /* centers the wrapper horizontally */
-  border: 2px solid blue;
 }
 
 .product-modal .modal-content h2 {
@@ -957,6 +954,13 @@ ul.social-buttons li a:active {
 /* Change the input text color */
 .modal-body .form-control {
     color: #1E2A38;  /* Change this to your preferred text color (e.g., dark grey or black) */
+}
+
+.modal-body{
+    
+    display: flex;
+  justify-content: center;  /* centers the wrapper horizontally */
+  border: 2px solid blue;
 }
 
 
