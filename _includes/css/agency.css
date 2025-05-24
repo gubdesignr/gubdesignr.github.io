@@ -966,13 +966,19 @@ ul.social-buttons li a:active {
 }
 .product-modal .modal-content .container .modal-body{
      
-  /*padding: 40px 20px;   Keep padding consistent around red box*/
+  /*padding: 40px 20px;   Keep padding consistent around child*/
   width: 100%;
   border: 2px solid green;
 }
 
-.star-primary{
-    width: fit-content;
+.product-modal .modal-content .container .modal-body .modal-title{
+
+text-align: center; 
+}
+
+.product-modal .modal-content .container .modal-body .modal-title .star-primary{
+     
+  border: 2px solid pink;
 }
 
 
