@@ -969,6 +969,8 @@ ul.social-buttons li a:active {
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 40px 20px;
+
+  border: 2px solid red;
 }
 
 /* Grey cards */
