@@ -970,11 +970,7 @@ ul.social-buttons li a:active {
   width: 100%;
   border: 2px solid green;
 }
-.product-modal .modal-content .container .modal-body .modal-title{
-     
-  /*padding: 40px 20px;   Keep padding consistent around red box*/
-  border: 2px solid orange;
-}
+
 
 
 
@@ -1052,6 +1048,11 @@ ul.social-buttons li a:active {
     height: 1px;
     margin: 60px 10px;
   }
+  .product-modal .modal-content .container .modal-body .modal-title{
+     font-size: 24px;
+  /*padding: 40px 20px;   Keep padding consistent around red box*/
+  border: 2px solid orange;
+}
 }
 
 /* Content inside card */
