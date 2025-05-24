@@ -964,7 +964,14 @@ ul.social-buttons li a:active {
   width: 100%;
   border: 2px solid blue;
 }
-
+.product-modal .modal-content .container .modal-body{
+    
+    /* display: flex;
+  justify-content: center;  centers the wrapper horizontally 
+  padding: 40px 20px;   Keep padding consistent around red box
+  width: 100%;*/
+  border: 2px solid green;
+}
 
 
 
