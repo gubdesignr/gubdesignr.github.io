@@ -970,6 +970,11 @@ ul.social-buttons li a:active {
   width: 100%;
   border: 2px solid green;
 }
+.product-modal .modal-content .container .modal-body .modal-title{
+     
+  /*padding: 40px 20px;   Keep padding consistent around red box*/
+  border: 2px solid orange;
+}
 
 
 
