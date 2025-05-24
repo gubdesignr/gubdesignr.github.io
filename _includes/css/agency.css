@@ -961,7 +961,6 @@ ul.social-buttons li a:active {
     display: flex;
   justify-content: center;  /* centers the wrapper horizontally */
   padding: 40px 20px;  /* Keep padding consistent around red box */
-  min-width: 961px;
   border: 2px solid blue;
 }
 
@@ -987,6 +986,7 @@ ul.social-buttons li a:active {
   .buy-row-wrapper {
     flex-direction: column;
     align-items: center;
+  padding: 40px 20px;
   }
 
   
