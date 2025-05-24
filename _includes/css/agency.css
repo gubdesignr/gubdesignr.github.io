@@ -964,7 +964,7 @@ ul.social-buttons li a:active {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  max-width: 961px;
+  width: 961px;
   box-sizing: border-box; /* padding incl in width */
   margin: 0 auto;
   padding: 40px 20px;
