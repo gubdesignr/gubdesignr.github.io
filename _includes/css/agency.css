@@ -1099,7 +1099,7 @@ text-align: center;
    flex-direction: column; /* Stack circles over text */
   justify-content: flex-start;
 
- height: 100px;
+ height: 78px;
   width: 200px;       /*or Fixed width */
   flex: 0 0 auto;     /*Prevent flexbox from resizing it, was 1*/
 }
