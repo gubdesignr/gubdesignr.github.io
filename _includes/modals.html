@@ -50,6 +50,24 @@
   <div class="buy-option">
     <p class="title">Without Build</p>
     <p class="price">{{ product.price_diy }}</p>
+    
+    <!-- Color selection -->
+  <div class="color-select-container">
+  <label class="color-option">
+    <input type="radio" name="color" value="Red/Orange">
+    <span class="color-circle" style="--primary: #ff0000; --secondary: #ff1e00;"></span>
+  </label>
+  <label class="color-option">
+    <input type="radio" name="color" value="Gold/Bronze">
+    <span class="color-circle" style="--primary: #ffd500; --secondary: #806007;"></span>
+  </label>
+  <label class="color-option">
+    <input type="radio" name="color" value="Silver/Black">
+    <span class="color-circle" style="--primary: #d0d6d0; --secondary: #151514;"></span>
+  </label>
+</div>
+  <p class="color-error" style="display: none; color: red;">Please select a color.</p>
+
     <form action="{{ product.link_diy }}" method="POST" target="_blank">
       <button class="btn-buy">Buy Now</button>
     </form>
@@ -200,6 +218,36 @@ document.querySelectorAll('.shipping-select').forEach(select => {
       e.preventDefault();
       if (error) error.classList.add('visible');
       select.focus();
+    }
+  });
+});
+
+
+
+// HIDE COLOR ERROR ON SELECTION
+document.querySelectorAll('.buy-option').forEach(option => {
+  const radios = option.querySelectorAll('input[type="radio"][name="color"]');
+  const error = option.querySelector('.color-error');
+
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (radio.checked && error) error.style.display = 'none';
+    });
+  });
+});
+
+// BLOCK BUY IF NO COLOR SELECTED
+document.querySelectorAll('.buy-option').forEach(option => {
+  const form = option.querySelector('form');
+  const radios = option.querySelectorAll('input[type="radio"][name="color"]');
+  const error = option.querySelector('.color-error');
+
+  form?.addEventListener('submit', e => {
+    const selected = [...radios].some(r => r.checked);
+    if (!selected) {
+      e.preventDefault();
+      if (error) error.style.display = 'block';
+      radios[0]?.focus(); // focus first color option
     }
   });
 });

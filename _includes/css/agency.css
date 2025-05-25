@@ -1089,6 +1089,29 @@ text-align: center;
   margin-bottom: 15px;
 }
 
+
+/*color select test*/
+.color-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--primary) 50%, var(--secondary) 50%);
+}
+
+.color-option input[type="radio"] {
+  display: none;
+}
+
+.color-option input[type="radio"]:checked + .color-circle {
+  border: 2px solid black;
+}
+
+
+
+
 /* Buy button */
 .btn-buy {
   background-color: #1E2A38;
