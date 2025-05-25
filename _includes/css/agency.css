@@ -1125,6 +1125,7 @@ text-align: center;
   color: red;
   font-size: 9px;
   display: none;
+  margin: 0;
 }
 
 .color-error.visible {
