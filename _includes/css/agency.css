@@ -1124,7 +1124,7 @@ text-align: center;
 .color-error{
   color: red;
   font-size: 9px;
-  display: none;
+  /*display: none;*/
 }
 .color-description{
     color: #1E2A38; 
