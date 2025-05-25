@@ -52,6 +52,7 @@
     <p class="price">{{ product.price_diy }}</p>
     
     <!-- Color selection -->
+     <div class="color-select-wrapper">
   <div class="color-select-container">
   <label class="color-option">
     <input type="radio" name="color" value="Red/Orange" data-description="Colour: Red and White">
@@ -67,7 +68,7 @@
   </label>
 </div>
   <p class="color-description"></p>
-  <p class="color-error">Please select a color.</p>
+  <p class="color-error">Please select a color.</p></div>
 
     <form action="{{ product.link_diy }}" method="POST" target="_blank">
       <button class="btn-buy">Buy Now</button>
