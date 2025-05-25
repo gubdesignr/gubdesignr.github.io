@@ -1132,6 +1132,7 @@ text-align: center;
 .color-error{
   color: red;
   font-size: 9px;
+  display: none;
 }
 
 .color-description{
