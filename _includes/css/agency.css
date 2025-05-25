@@ -1091,6 +1091,9 @@ text-align: center;
 
 
 /*color select test*/
+.color-option{
+    border: 2px solid orange;
+}
 .color-circle {
   width: 36px;
   height: 36px;
@@ -1112,6 +1115,11 @@ text-align: center;
   color: red;
   font-size: 9px;
   display: none;
+}
+.color-description{
+    color: #1E2A38; 
+    font-size: 12px;
+    display: none;
 }
 
 
