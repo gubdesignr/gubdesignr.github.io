@@ -1126,6 +1126,10 @@ text-align: center;
   font-size: 9px;
   display: none;
 }
+
+.color-error.visible {
+  display: block;
+}
 .color-description{
     color: #1E2A38; 
     font-size: 12px;
