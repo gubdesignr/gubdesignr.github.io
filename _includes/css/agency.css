@@ -1094,6 +1094,15 @@ text-align: center;
 .color-select-wrapper{
     border: 2px solid orange;
     padding: 0px;
+
+    
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+
+ height: 62px;
+  width: 100%;       /*or Fixed width */
+  flex: 0 0 auto;     /*Prevent flexbox from resizing it, was 1*/
 }
 .color-circle {
   width: 36px;
@@ -1110,7 +1119,7 @@ text-align: center;
 }
 
 .color-option input[type="radio"]:checked + .color-circle {
-  border: 2px solid black;
+  border: 2px solid #1E2A38;
 }
 .color-error{
   color: red;
