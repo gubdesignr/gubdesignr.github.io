@@ -1096,10 +1096,11 @@ text-align: center;
 
     box-sizing: border-box;
   display: flex;
+   flex-direction: column; /* Stack circles over text */
   justify-content: flex-start;
 
- height: 62px;
-  width: 100%;       /*or Fixed width */
+ height: 100px;
+  width: 200px;       /*or Fixed width */
   flex: 0 0 auto;     /*Prevent flexbox from resizing it, was 1*/
 }
 
