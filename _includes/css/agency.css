@@ -1121,16 +1121,14 @@ text-align: center;
 .color-option input[type="radio"]:checked + .color-circle {
   border: 2px solid #1E2A38;
 }
+.color-message-wrapper{
+    border: 2px solid purple;
+}
 .color-error{
   color: red;
   font-size: 9px;
-  display: none;
-  margin: 0;
 }
 
-.color-error.visible {
-  display: block;
-}
 .color-description{
     color: #1E2A38; 
     font-size: 12px;
