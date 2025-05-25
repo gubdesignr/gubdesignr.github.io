@@ -1093,6 +1093,7 @@ text-align: center;
 /*color select test*/
 .color-select-wrapper{
     border: 2px solid orange;
+    padding: 0px;
 }
 .color-circle {
   width: 36px;
@@ -1120,7 +1121,6 @@ text-align: center;
     color: #1E2A38; 
     font-size: 12px;
     text-align: left;
-    margin-bottom: 0px;
 }
 
 
