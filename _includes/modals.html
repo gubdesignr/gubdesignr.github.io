@@ -248,13 +248,25 @@ document.querySelectorAll('.shipping-select').forEach(select => {
 
 
 
-
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.buy-option').forEach(option => {
+  // Listen for modal open event
+  document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('transitionend', () => {
+      if (modal.classList.contains('open')) {
+        // Modal has finished opening — trigger color setup
+        updateColorSelection(modal);
+      }
+    });
+  });
+});
+
+// Modular logic to run on each product section
+function updateColorSelection(container) {
+  container.querySelectorAll('.buy-option').forEach(option => {
     const radios = option.querySelectorAll('input[name="color"]');
     const descriptionEl = option.querySelector('.color-description');
 
-    // Update description on color change
+    // Add change listeners
     radios.forEach(radio => {
       radio.addEventListener('change', () => {
         if (descriptionEl) {
@@ -263,15 +275,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Trigger change event for pre-checked radio so:
-    // - Description is set
-    // - :checked border styling is activated
+    // Dispatch 'change' event for the pre-selected one
     const checkedRadio = Array.from(radios).find(r => r.checked);
     if (checkedRadio) {
       checkedRadio.dispatchEvent(new Event('change', { bubbles: true }));
     }
   });
-});
+}
 
 </script>
 
