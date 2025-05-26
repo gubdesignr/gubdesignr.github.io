@@ -247,26 +247,23 @@ document.querySelectorAll('.shipping-select').forEach(select => {
 
 
 
-
+// Wait for the DOM to be fully loaded COLOR
 document.addEventListener('DOMContentLoaded', () => {
-  // Listen for modal open event
+  // Attach listener to every modal for when it becomes visible (Bootstrap-specific)
   document.querySelectorAll('.modal').forEach(modal => {
-    modal.addEventListener('transitionend', () => {
-      if (modal.classList.contains('open')) {
-        // Modal has finished opening — trigger color setup
-        updateColorSelection(modal);
-      }
+    modal.addEventListener('shown.bs.modal', () => {
+      updateColorSelection(modal);
     });
   });
 });
 
-// Modular logic to run on each product section
+// Function to initialize color description logic in a given container (modal)
 function updateColorSelection(container) {
   container.querySelectorAll('.buy-option').forEach(option => {
     const radios = option.querySelectorAll('input[name="color"]');
     const descriptionEl = option.querySelector('.color-description');
 
-    // Add change listeners
+    // Attach change listeners to each radio button
     radios.forEach(radio => {
       radio.addEventListener('change', () => {
         if (descriptionEl) {
@@ -275,13 +272,14 @@ function updateColorSelection(container) {
       });
     });
 
-    // Dispatch 'change' event for the pre-selected one
+    // Force-trigger a change event for the pre-selected radio to populate the UI immediately
     const checkedRadio = Array.from(radios).find(r => r.checked);
     if (checkedRadio) {
       checkedRadio.dispatchEvent(new Event('change', { bubbles: true }));
     }
   });
 }
+
 
 </script>
 
