@@ -1098,7 +1098,7 @@ text-align: center;
   display: flex;
    flex-direction: column; /* Stack circles over text */
 
- height: 62px;
+ height: 100px;
   width: 200px;       /*or Fixed width */
   flex: 0 0 auto;     /*Prevent flexbox from resizing it, was 1*/
 }
