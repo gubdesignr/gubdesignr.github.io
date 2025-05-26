@@ -260,10 +260,11 @@ document.querySelectorAll('.buy-option').forEach(option => {
     });
   });
 
-  // Set the initial description to the pre-selected color
+  // Force re-check the preselected radio (helps trigger :checked CSS)
   const checkedRadio = Array.from(radios).find(r => r.checked);
-  if (checkedRadio && descriptionEl) {
-    descriptionEl.textContent = checkedRadio.dataset.description || '';
+  if (checkedRadio) {
+    checkedRadio.checked = true; // <- Forces browser to update :checked styling
+    checkedRadio.dispatchEvent(new Event('change', { bubbles: true })); // Also updates description
   }
 });
 </script>
