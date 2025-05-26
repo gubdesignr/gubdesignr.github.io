@@ -260,12 +260,6 @@ document.querySelectorAll('.shipping-select').forEach(select => {
     });
   });
 
-  const checkedRadio = Array.from(radios).find(r => r.checked);
-  if (checkedRadio) {
-    //  This line triggers a 'change' event so both the description and border styles apply immediately
-    checkedRadio.dispatchEvent(new Event('change', { bubbles: true }));
-  }
-});
 
 </script>
 
