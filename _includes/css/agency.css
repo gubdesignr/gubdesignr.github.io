@@ -1126,7 +1126,7 @@ text-align: center;
 }
 .color-message-wrapper{
     border: 2px solid purple;
-    height: 18px;
+    height: 30px;
      display: flex;
   flex-direction: column;
   justify-content: flex-start;
