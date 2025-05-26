@@ -1098,11 +1098,9 @@ text-align: center;
   display: flex;
    flex-direction: column; /* Stack circles over text */
 
- height: 95px;
+ height: 62px;
   width: 200px;       /*or Fixed width */
   flex: 0 0 auto;     /*Prevent flexbox from resizing it, was 1*/
-
-  margin-bottom: 10px;
 }
 .color-select-container{
      border: 2px solid rgb(30, 255, 0);
@@ -1139,7 +1137,6 @@ text-align: center;
   font-size: 9px;
   display: none;
   background: yellow;
-  position: relative;
 }
 
 .color-description{
