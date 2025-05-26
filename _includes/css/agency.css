@@ -1102,6 +1102,10 @@ text-align: center;
   width: 200px;       /*or Fixed width */
   flex: 0 0 auto;     /*Prevent flexbox from resizing it, was 1*/
 }
+.color-select-container{
+     border: 2px solid rgb(30, 255, 0);
+
+}
 
 .color-circle {
   width: 36px;
