@@ -246,11 +246,12 @@ document.querySelectorAll('.shipping-select').forEach(select => {
 });
 
 
-//color
- document.querySelectorAll('.buy-option').forEach(option => {
+// Colour description dynamic update
+document.querySelectorAll('.buy-option').forEach(option => {
   const radios = option.querySelectorAll('input[type="radio"][name="color"]');
   const descriptionEl = option.querySelector('.color-description');
 
+  // Update description when a radio is changed
   radios.forEach(radio => {
     radio.addEventListener('change', () => {
       const desc = radio.dataset.description || '';
@@ -259,6 +260,32 @@ document.querySelectorAll('.shipping-select').forEach(select => {
       }
     });
   });
+
+  // Set the initial description to the pre-selected color
+  const checkedRadio = Array.from(radios).find(r => r.checked);
+  if (radio.checked && descriptionEl) {
+      // Update description text
+      descriptionEl.textContent = radio.dataset.description || '';
+
+      // Remove 'checked' class from all color circles
+      document.querySelectorAll('.color-circle').forEach(circle => {
+        circle.classList.remove('checked');
+      });
+
+      // Add 'checked' class to the selected color's circle
+      const circle = radio.closest('.color-option')?.querySelector('.color-circle');
+      if (circle) {
+        circle.classList.add('checked');
+      }
+    }
+  });
+
+  document.querySelectorAll('input[type="radio"][name="color"]').forEach(radio => {
+  if (radio.checked) {
+    radio.dispatchEvent(new Event('change'));
+  }
+});
+
 
 
 </script>
