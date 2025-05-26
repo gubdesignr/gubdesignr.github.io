@@ -228,7 +228,7 @@ document.querySelectorAll('.shipping-select').forEach(select => {
 
 // Handle color selection validation
 document.querySelectorAll('.buy-option form').forEach(form => {
-  const colorInputs = form.querySelectorAll('input[name="color"]');
+  const colorInputs = form.querySelectorAll('input[type="radio"][name="color"]');
   const error = form.querySelector('.color-error');
 
   // Hide error when a color is picked
