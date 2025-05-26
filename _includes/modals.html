@@ -246,28 +246,25 @@ document.querySelectorAll('.shipping-select').forEach(select => {
 });
 
 
-//color
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.color-select-wrapper').forEach(wrapper => {
-    updateColorSelection(wrapper); // Run immediately for defaults
+//colordocument.querySelectorAll('.buy-option').forEach(option => {
+  const radios = option.querySelectorAll('input[type="radio"][name="color"]');
+  const descriptionEl = option.querySelector('.color-description');
 
-    // Add listener for user changes
-    wrapper.querySelectorAll('input[type="radio"][name="color"]').forEach(radio => {
-      radio.addEventListener('change', () => {
-        updateColorSelection(wrapper);
-      });
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      const desc = radio.dataset.description || '';
+      if (descriptionEl) {
+        descriptionEl.textContent = desc;
+      }
     });
   });
-});
 
-function updateColorSelection(wrapper) {
-  const checked = wrapper.querySelector('input[type="radio"][name="color"]:checked');
-  const descBox = wrapper.querySelector('.color-description');
-
-  if (checked && descBox) {
-    descBox.textContent = checked.dataset.description || '';
+  const checkedRadio = Array.from(radios).find(r => r.checked);
+  if (checkedRadio) {
+    //  This line triggers a 'change' event so both the description and border styles apply immediately
+    checkedRadio.dispatchEvent(new Event('change', { bubbles: true }));
   }
-}
+});
 
 </script>
 
