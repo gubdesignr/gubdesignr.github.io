@@ -55,20 +55,39 @@
      <div class="color-select-wrapper">
   <div class="color-select-container">
   <label class="color-option">
-    <input type="radio" name="color" value="Red/Orange" data-description="Colour: Red and White">
-    <span class="color-circle" style="--primary: white; --secondary: #ff1e00;"></span>
-  </label>
-  <label class="color-option">
-    <input type="radio" name="color" value="Gold/Bronze" data-description="Colour: Leak Gold and Brown">
-    <span class="color-circle" style="--primary: #ffd500; --secondary: #806007;"></span>
-  </label>
-  <label class="color-option">
-    <input type="radio" name="color" value="Silver/Black" data-description="Colour: Silver and Black">
-    <span class="color-circle" style="--primary: #d0d6d0; --secondary: #151514;"></span>
-  </label>
+     {% if product.modal-id == "crestline" %}
+    <!-- Only Silver/Black shown and preselected -->
+    <label class="color-option">
+      <input type="radio" name="color" value="Silver/Black" data-description="Colour: Silver and Black" checked>
+      <span class="color-circle" style="--primary: #d0d6d0; --secondary: #151514;"></span>
+    </label>
+
+  {% elsif product.modal-id == "qline" %}
+    <!-- Only Gold/Bronze shown and preselected -->
+    <label class="color-option">
+      <input type="radio" name="color" value="Gold/Bronze" data-description="Colour: Leak Gold and Bronze" checked>
+      <span class="color-circle" style="--primary: #ffd500; --secondary: #806007;"></span>
+    </label>
+
+  {% else %}
+    <!-- All three options shown, one selected based on product.default_color -->
+    <label class="color-option">
+      <input type="radio" name="color" value="Red/Orange" data-description="Colour: Red and White" {% if product.default_color == "White/Red" or product.default_color == "Red/Orange" %}checked{% endif %}>
+      <span class="color-circle" style="--primary: white; --secondary: #ff1e00;"></span>
+    </label>
+
+    <label class="color-option">
+      <input type="radio" name="color" value="Gold/Bronze" data-description="Colour: Leak Gold and Bronze" {% if product.default_color == "Gold/Bronze" %}checked{% endif %}>
+      <span class="color-circle" style="--primary: #ffd500; --secondary: #806007;"></span>
+    </label>
+
+    <label class="color-option">
+      <input type="radio" name="color" value="Silver/Black" data-description="Colour: Silver and Black" {% if product.default_color == "Silver/Black" %}checked{% endif %}>
+      <span class="color-circle" style="--primary: #d0d6d0; --secondary: #151514;"></span>
+    </label>
+  {% endif %}
 </div>
-  <div class="color-message-wrapper"><p class="color-description"></p>
-  <p class="color-error">Please select a color.</p></div>
+  <div class="color-message-wrapper"><p class="color-description"></p></div>
 </div>
 
     <form action="{{ product.link_diy }}" method="POST" target="_blank">
@@ -225,37 +244,6 @@ document.querySelectorAll('.shipping-select').forEach(select => {
   });
 });
 
-
-
-
-// HIDE ERROR ON VALID SELECTION
-document.querySelectorAll('input[type="radio"][name="color"]').forEach(radio => {
-  const error = radio.closest('.buy-option')?.querySelector('.color-error');
-
-  radio.addEventListener('change', () => {
-    if (radio.checked && error) error.classList.remove('visible');
-  });
-});
-
-// BLOCK BUY IF NO COLOR SELECTED
-document.querySelectorAll('.buy-option').forEach(option => {
-  const form = option.querySelector('form');
-  const colorRadios = option.querySelectorAll('input[type="radio"][name="color"]');
-  const error = option.querySelector('.color-error');
-
-  form?.addEventListener('submit', e => {
-    const oneChecked = Array.from(colorRadios).some(radio => radio.checked);
-    if (!oneChecked) {
-      e.preventDefault();
-      if (error) error.classList.add('visible');
-      colorRadios[0]?.focus(); // Focus first radio
-    }
-  });
-});
-
-
-
-
 //Colour description dynamic also 
 document.querySelectorAll('.buy-option').forEach(option => {
   const radios = option.querySelectorAll('input[name="color"]');
@@ -270,6 +258,12 @@ document.querySelectorAll('.buy-option').forEach(option => {
     });
   });
 });
+
+// Immediately set the description of the selected radio button
+const checkedRadio = Array.from(radios).find(r => r.checked);
+if (checkedRadio && descriptionEl) {
+  descriptionEl.textContent = checkedRadio.dataset.description || '';
+}
 </script>
 
 

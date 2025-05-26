@@ -11,4 +11,5 @@ client: Start Bootstrap
 category: Web Development
 description: A straightforward 2-input preamplifier powered by 6C4-P and 6N3P valves, designed for musicality and simplicity.
 
+default_color: White/Red
 ---

@@ -19,4 +19,6 @@ link_diy: https://buy.stripe.com/test_XXXXDIY
 price_built: £800
 link_built: https://buy.stripe.com/test_XXXXBUILT
 
+default_color: White/Red
+
 ---

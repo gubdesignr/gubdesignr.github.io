@@ -28,4 +28,6 @@ link_built_apac: https://buy.stripe.com/test_built_apac
 link_built_eu: https://buy.stripe.com/test_built_eu
 link_built_scandi: https://buy.stripe.com/test_built_scandi
 link_built_na: https://buy.stripe.com/test_built_na
+
+default_color: White/Red
 ---
