@@ -1097,6 +1097,7 @@ text-align: center;
     box-sizing: border-box;
     display: flex;
    flex-direction: column; /* Stack circles over text */
+   justify-content: center;
 
 
 
