@@ -1095,8 +1095,10 @@ text-align: center;
     border: 2px solid orange;
 
     box-sizing: border-box;
-  display: grid;
-  grid-template-rows: auto auto;
+    display: flex;
+   flex-direction: column; /* Stack circles over text */
+
+
 
  height: 100px;
   width: 200px;       /*or Fixed width */
