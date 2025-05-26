@@ -1108,6 +1108,7 @@ text-align: center;
 .color-select-container{
      border: 2px solid rgb(30, 255, 0);
     display: flex;
+    align-items: center;
 }
 
 .color-circle {
