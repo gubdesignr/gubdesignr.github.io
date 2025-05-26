@@ -54,7 +54,7 @@
     <!-- Color selection -->
      <div class="color-select-wrapper">
   <div class="color-select-container">
-    
+
      {% if product.modal-id == "crestline" %}
     <!-- Only gold/bronze shown and preselected -->
      <label class="color-option">
@@ -245,26 +245,40 @@ document.querySelectorAll('.shipping-select').forEach(select => {
   });
 });
 
-// Colour description dynamic update
+
+
+
+
+
+// Loop through every product's color selection section
 document.querySelectorAll('.buy-option').forEach(option => {
+  // Get all radio buttons in this section (color options)
   const radios = option.querySelectorAll('input[name="color"]');
+
+  // Get the element where we want to display the selected color description
   const descriptionEl = option.querySelector('.color-description');
 
-  // Update description when a radio is changed
+  // For each radio button, add an event listener
   radios.forEach(radio => {
+    // When the user changes (selects) a color option
     radio.addEventListener('change', () => {
+      // Get the description from the selected radio button's data-description attribute
       const desc = radio.dataset.description || '';
+
+      // If the description element exists, update its text content
       if (descriptionEl) {
         descriptionEl.textContent = desc;
       }
     });
   });
 
-  // Force re-check the preselected radio (helps trigger :checked CSS)
+  // Now we find the radio that is pre-checked on page load
   const checkedRadio = Array.from(radios).find(r => r.checked);
+
   if (checkedRadio) {
-    checkedRadio.checked = true; // <- Forces browser to update :checked styling
-    checkedRadio.dispatchEvent(new Event('change', { bubbles: true })); // Also updates description
+    // Manually trigger a 'change' event so the description updates on load,
+    // AND so that CSS (like :checked + .color-circle) is visually applied right away
+    checkedRadio.dispatchEvent(new Event('change', { bubbles: true }));
   }
 });
 </script>
