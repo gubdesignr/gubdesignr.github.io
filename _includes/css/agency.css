@@ -1095,8 +1095,8 @@ text-align: center;
     border: 2px solid orange;
 
     box-sizing: border-box;
-  display: flex;
-   flex-direction: column; /* Stack circles over text */
+  display: grid;
+  grid-template-rows: auto auto;
 
  height: 100px;
   width: 200px;       /*or Fixed width */
@@ -1104,7 +1104,7 @@ text-align: center;
 }
 .color-select-container{
      border: 2px solid rgb(30, 255, 0);
-
+    display: flex;
 }
 
 .color-circle {
