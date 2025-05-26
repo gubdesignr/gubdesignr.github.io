@@ -1101,6 +1101,8 @@ text-align: center;
  height: 95px;
   width: 200px;       /*or Fixed width */
   flex: 0 0 auto;     /*Prevent flexbox from resizing it, was 1*/
+
+  margin-bottom: 10px;
 }
 .color-select-container{
      border: 2px solid rgb(30, 255, 0);
