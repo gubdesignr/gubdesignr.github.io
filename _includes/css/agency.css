@@ -1125,9 +1125,15 @@ text-align: center;
   display: none;
 }
 
-.color-option input[type="radio"]:checked + .color-circle {
+/*.color-option input[type="radio"]:checked + .color-circle {
   border: 2px solid #1E2A38;
+}*/
+
+.color-circle.checked {
+  border: 2px solid #1E2A38;
+  transform: scale(1.1);
 }
+
 .color-message-wrapper{
     border: 2px solid purple;
     height: 30px;
