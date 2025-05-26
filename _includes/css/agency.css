@@ -1133,6 +1133,8 @@ text-align: center;
   color: red;
   font-size: 9px;
   display: none;
+  background: yellow;
+  position: relative;
 }
 
 .color-description{
