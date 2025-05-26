@@ -56,17 +56,18 @@
   <div class="color-select-container">
   <label class="color-option">
      {% if product.modal-id == "crestline" %}
-    <!-- Only Silver/Black shown and preselected -->
+    <!-- Only gold/bronze shown and preselected -->
+     <label class="color-option">
+      <input type="radio" name="color" value="Gold/Bronze" data-description="Colour: Leak Gold and Bronze" checked>
+      <span class="color-circle" style="--primary: #ffd500; --secondary: #806007;"></span>
+    </label>
+    
+
+  {% elsif product.modal-id == "qline" %}
+    <!-- Only silver/black shown and preselected -->
     <label class="color-option">
       <input type="radio" name="color" value="Silver/Black" data-description="Colour: Silver and Black" checked>
       <span class="color-circle" style="--primary: #d0d6d0; --secondary: #151514;"></span>
-    </label>
-
-  {% elsif product.modal-id == "qline" %}
-    <!-- Only Gold/Bronze shown and preselected -->
-    <label class="color-option">
-      <input type="radio" name="color" value="Gold/Bronze" data-description="Colour: Leak Gold and Bronze" checked>
-      <span class="color-circle" style="--primary: #ffd500; --secondary: #806007;"></span>
     </label>
 
   {% else %}
@@ -244,11 +245,12 @@ document.querySelectorAll('.shipping-select').forEach(select => {
   });
 });
 
-//Colour description dynamic also 
+// Colour description dynamic update
 document.querySelectorAll('.buy-option').forEach(option => {
   const radios = option.querySelectorAll('input[name="color"]');
   const descriptionEl = option.querySelector('.color-description');
 
+  // Update description when a radio is changed
   radios.forEach(radio => {
     radio.addEventListener('change', () => {
       const desc = radio.dataset.description || '';
@@ -257,13 +259,13 @@ document.querySelectorAll('.buy-option').forEach(option => {
       }
     });
   });
-});
 
-// Immediately set the description of the selected radio button
-const checkedRadio = Array.from(radios).find(r => r.checked);
-if (checkedRadio && descriptionEl) {
-  descriptionEl.textContent = checkedRadio.dataset.description || '';
-}
+  // Set the initial description to the pre-selected color
+  const checkedRadio = Array.from(radios).find(r => r.checked);
+  if (checkedRadio && descriptionEl) {
+    descriptionEl.textContent = checkedRadio.dataset.description || '';
+  }
+});
 </script>
 
 
