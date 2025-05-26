@@ -249,29 +249,26 @@ document.querySelectorAll('.shipping-select').forEach(select => {
 //color
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.color-select-wrapper').forEach(wrapper => {
-    initColorSelector(wrapper);
+    updateColorSelection(wrapper); // Run immediately for defaults
+
+    // Add listener for user changes
+    wrapper.querySelectorAll('input[type="radio"][name="color"]').forEach(radio => {
+      radio.addEventListener('change', () => {
+        updateColorSelection(wrapper);
+      });
+    });
   });
 });
 
-function initColorSelector(wrapper) {
-  const radios = wrapper.querySelectorAll('input[type="radio"]');
-  const descriptionEl = wrapper.querySelector('.color-description');
+function updateColorSelection(wrapper) {
+  const checked = wrapper.querySelector('input[type="radio"][name="color"]:checked');
+  const descBox = wrapper.querySelector('.color-description');
 
-  // Set description on page load based on default checked radio
-  const checkedRadio = wrapper.querySelector('input[type="radio"]:checked');
-  if (checkedRadio && descriptionEl) {
-    descriptionEl.textContent = checkedRadio.dataset.description || '';
+  if (checked && descBox) {
+    descBox.textContent = checked.dataset.description || '';
   }
-
-  // Update description on user change
-  radios.forEach(radio => {
-    radio.addEventListener('change', () => {
-      if (descriptionEl) {
-        descriptionEl.textContent = radio.dataset.description || '';
-      }
-    });
-  });
 }
+
 </script>
 
 
