@@ -246,34 +246,30 @@ document.querySelectorAll('.shipping-select').forEach(select => {
 });
 
 
-
+//color
 document.addEventListener('DOMContentLoaded', () => {
-  // Ensure update only runs after modal is fully shown
-  document.querySelectorAll('.product-modal').forEach(modal => {
-    modal.addEventListener('shown.bs.modal', () => {
-      updateColorSelection(modal);
-    });
+  document.querySelectorAll('.color-select-wrapper').forEach(wrapper => {
+    initColorSelector(wrapper);
   });
 });
 
-function updateColorSelection(container) {
-  container.querySelectorAll('.buy-option').forEach(option => {
-    const radios = option.querySelectorAll('input[type="radio"][name="color"]');
-    const descriptionEl = option.querySelector('.color-description');
+function initColorSelector(wrapper) {
+  const radios = wrapper.querySelectorAll('input[type="radio"]');
+  const descriptionEl = wrapper.querySelector('.color-description');
 
-    radios.forEach(radio => {
-      radio.addEventListener('change', () => {
-        if (descriptionEl) {
-          descriptionEl.textContent = radio.dataset.description || '';
-        }
-      });
+  // Set description on page load based on default checked radio
+  const checkedRadio = wrapper.querySelector('input[type="radio"]:checked');
+  if (checkedRadio && descriptionEl) {
+    descriptionEl.textContent = checkedRadio.dataset.description || '';
+  }
+
+  // Update description on user change
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (descriptionEl) {
+        descriptionEl.textContent = radio.dataset.description || '';
+      }
     });
-
-    // Trigger change for the pre-selected one (renders correct description + border)
-    const checked = option.querySelector('input[type="radio"][name="color"]:checked');
-    if (checked) {
-      checked.dispatchEvent(new Event('change', { bubbles: true }));
-    }
   });
 }
 </script>
