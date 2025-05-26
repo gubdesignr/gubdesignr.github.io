@@ -229,7 +229,7 @@ document.querySelectorAll('.shipping-select').forEach(select => {
 
 
 // HIDE ERROR ON VALID SELECTION
-document.querySelectorAll('.color-radio').forEach(radio => {
+document.querySelectorAll('input[type="radio"][name="color"]').forEach(radio => {
   const error = radio.closest('.buy-option')?.querySelector('.color-error');
 
   radio.addEventListener('change', () => {
@@ -240,7 +240,7 @@ document.querySelectorAll('.color-radio').forEach(radio => {
 // BLOCK BUY IF NO COLOR SELECTED
 document.querySelectorAll('.buy-option').forEach(option => {
   const form = option.querySelector('form');
-  const colorRadios = option.querySelectorAll('.color-radio');
+  const colorRadios = option.querySelectorAll('input[type="radio"][name="color"]');
   const error = option.querySelector('.color-error');
 
   form?.addEventListener('submit', e => {
@@ -248,7 +248,7 @@ document.querySelectorAll('.buy-option').forEach(option => {
     if (!oneChecked) {
       e.preventDefault();
       if (error) error.classList.add('visible');
-      colorRadios[0]?.focus(); // Optional: focus first radio
+      colorRadios[0]?.focus(); // Focus first radio
     }
   });
 });
