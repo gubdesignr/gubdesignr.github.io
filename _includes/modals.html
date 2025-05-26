@@ -226,28 +226,34 @@ document.querySelectorAll('.shipping-select').forEach(select => {
 });
 
 
-// Handle color selection validation
-document.querySelectorAll('.buy-option form').forEach(form => {
-  const colorInputs = form.querySelectorAll('input[type="radio"][name="color"]');
-  const error = form.querySelector('.color-error');
 
-  // Hide error when a color is picked
-  colorInputs.forEach(input => {
-    input.addEventListener('change', () => {
-      if (error) error.classList.remove('visible');
-    });
+
+// HIDE ERROR ON VALID SELECTION
+document.querySelectorAll('.color-radio').forEach(radio => {
+  const error = radio.closest('.buy-option')?.querySelector('.color-error');
+
+  radio.addEventListener('change', () => {
+    if (radio.checked && error) error.classList.remove('visible');
   });
+});
 
-  // Show error on submit if no color is picked
-  form.addEventListener('submit', e => {
-    const colorSelected = Array.from(colorInputs).some(input => input.checked);
-    if (!colorSelected) {
+// BLOCK BUY IF NO COLOR SELECTED
+document.querySelectorAll('.buy-option').forEach(option => {
+  const form = option.querySelector('form');
+  const colorRadios = option.querySelectorAll('.color-radio');
+  const error = option.querySelector('.color-error');
+
+  form?.addEventListener('submit', e => {
+    const oneChecked = Array.from(colorRadios).some(radio => radio.checked);
+    if (!oneChecked) {
       e.preventDefault();
       if (error) error.classList.add('visible');
-      colorInputs[0]?.focus(); // Focus first option
+      colorRadios[0]?.focus(); // Optional: focus first radio
     }
   });
 });
+
+
 
 
 //Colour description dynamic also 
